@@ -122,33 +122,49 @@ function Home() {
           <Reveal>
             <p className="mono-label">About</p>
           </Reveal>
+
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div className="space-y-6">
-              {profile.summary.map((para, i) => (
-                <Reveal key={i} delay={i * 80}>
-                  <p className="text-lg leading-relaxed text-muted-foreground">{para}</p>
-                </Reveal>
-              ))}
+              <Reveal delay={80}>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  I&apos;m a Business &amp; Data Analyst, Founder and Consultant working across
+                  strategy, data analytics, business intelligence, operations and financial services.
+                </p>
+              </Reveal>
+              <Reveal delay={160}>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  I combine business understanding with hands-on analytical capability to help
+                  organisations solve complex problems, improve performance and make better
+                  decisions.
+                </p>
+              </Reveal>
+              <Reveal delay={240}>
+                <Link
+                  to="/about"
+                  className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal"
+                >
+                  Read my story
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Reveal>
             </div>
+
             <Reveal delay={140}>
               <div className="card-surface p-6">
                 <p className="mono-label">The sequence</p>
-                <ol className="mt-5 space-y-3">
-                  {[
-                    "Understand the business",
-                    "Work with the data",
-                    "Find the insight",
-                    "Shape the strategy",
-                    "Support execution",
-                  ].map((step, i) => (
-                    <li key={step} className="flex items-baseline gap-3 text-sm">
+                <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
+                  {["Understand", "Analyse", "Strategise", "Execute"].map((step, i, arr) => (
+                    <span key={step} className="flex items-center gap-2">
                       <span className="font-mono text-[11px] text-signal">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      {step}
-                    </li>
+                      <span>{step}</span>
+                      {i < arr.length - 1 && (
+                        <ArrowRight className="h-3 w-3 text-muted-foreground" />
+                      )}
+                    </span>
                   ))}
-                </ol>
+                </div>
               </div>
             </Reveal>
           </div>
