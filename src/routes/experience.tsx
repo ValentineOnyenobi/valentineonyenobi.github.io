@@ -5,13 +5,16 @@ import { certifications, education, experience } from "@/data/portfolio";
 export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: [
-      { title: "Experience & Education — Valentine Onyenobi" },
+      { title: "Experience & Education — Valentine Onyenobi, Business & Data Analyst" },
       {
         name: "description",
         content:
           "Career timeline of Valentine Onyenobi: founder at Kajco Finance, data analyst trainee in London, managing consultant and project manager across the UAE and Nigeria.",
       },
-      { property: "og:title", content: "Experience & Education — Valentine Onyenobi" },
+      {
+        property: "og:title",
+        content: "Experience & Education — Valentine Onyenobi, Business & Data Analyst",
+      },
       {
         property: "og:description",
         content: "A decade of consulting, project delivery and analytics across three regions.",
@@ -99,12 +102,6 @@ function Experience() {
             </div>
           </Reveal>
 
-          <Reveal delay={180}>
-            <div className="card-surface p-6">
-              <p className="mono-label">References</p>
-              <p className="mt-4 text-sm text-muted-foreground">Available on request.</p>
-            </div>
-          </Reveal>
         </div>
       </div>
     </div>
