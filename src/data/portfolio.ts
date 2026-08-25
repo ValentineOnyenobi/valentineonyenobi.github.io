@@ -1,16 +1,15 @@
 export const profile = {
   name: "Valentine Onyenobi",
-  role: "Business Strategist & Data Analyst",
+  role: "Business & Data Analyst",
   disciplines: "Strategy · Data · Business Intelligence · Operations",
   tagline:
     "I help organisations understand performance, solve complex business problems and make better decisions - combining strategic thinking with hands-on analytical capability.",
   location: "London, UK",
   email: "valentine@freetownconsultancy.com",
-  phone: "+44 7883 396 725",
   linkedin: "https://www.linkedin.com/in/valentineonyenobi/",
   github: "https://github.com/ValentineOnyenobi",
   summary: [
-    "I am a Business Strategist and Data Analyst working across business strategy, data analytics, business intelligence, operations and financial services. My experience spans the UK, Nigeria and the UAE - whether I'm joining a team, advising on a specific problem, or supporting a project.",
+    "I am a Business & Data Analyst working across business strategy, data analytics, business intelligence, operations and financial services. My experience spans the UK, Nigeria and the UAE - whether I'm joining a team, advising on a specific problem, or supporting a project.",
     "My value is operating across both sides of a business problem: understand the business, work with the data, find the insight, shape the strategy, support execution.",
     "I don't treat every problem as a data problem, and I don't treat every problem as a strategy problem. I start with the business question, then bring in whatever mix of analysis, process and technology it actually needs.",
   ],

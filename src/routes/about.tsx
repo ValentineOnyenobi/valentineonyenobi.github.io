@@ -6,13 +6,13 @@ import { certifications, profile, skillGroups } from "@/data/portfolio";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Valentine Onyenobi, Data Analyst" },
+      { title: "About — Valentine Onyenobi, Business & Data Analyst" },
       {
         name: "description",
         content:
-          "Valentine Onyenobi is a London-based data analyst and business consultant with an MBA in Global Business and a decade of delivery across the UK, UAE and Nigeria.",
+          "Valentine Onyenobi is a London-based Business & Data Analyst with experience across strategy, consulting, analytics, business intelligence and operations in the UK, UAE and Nigeria.",
       },
-      { property: "og:title", content: "About — Valentine Onyenobi, Data Analyst" },
+      { property: "og:title", content: "About — Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
         content: "Analytics, consulting and fintech — the background behind the work.",

@@ -16,13 +16,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Valentine Onyenobi — Business Strategist & Data Analyst" },
+      { title: "Valentine Onyenobi — Business & Data Analyst" },
       {
         name: "description",
         content:
           "Business strategy, data analytics, business intelligence and operations. Valentine Onyenobi helps organisations understand performance and make better decisions across the UK, Nigeria and the UAE.",
       },
-      { property: "og:title", content: "Valentine Onyenobi — Business Strategist & Data Analyst" },
+      { property: "og:title", content: "Valentine Onyenobi — Business & Data Analyst" },
       {
         property: "og:description",
         content:
@@ -65,7 +65,7 @@ function Home() {
               <span className="text-signal-gradient">Onyenobi</span>
             </h1>
             <p className="mt-5 font-display text-xl font-medium text-foreground/90 sm:text-2xl">
-              Business Strategist &amp; Data Analyst
+              Business &amp; Data Analyst
             </p>
           </Reveal>
 

@@ -80,11 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Valentine Onyenobi — Data Analyst & Business Consultant" },
+      { title: "Valentine Onyenobi — Business & Data Analyst" },
       {
         name: "description",
         content:
-          "Portfolio of Valentine Onyenobi — London-based data analyst and business consultant working in SQL, Python, Power BI and Tableau.",
+          "Portfolio of Valentine Onyenobi — London-based Business & Data Analyst working across strategy, analytics, business intelligence and operations.",
       },
       { name: "author", content: "Valentine Onyenobi" },
       { property: "og:site_name", content: "Valentine Onyenobi" },
@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Valentine Onyenobi",
-          jobTitle: "Data Analyst & Business Consultant",
+          jobTitle: "Business & Data Analyst",
           email: "mailto:valentine@freetownconsultancy.com",
           address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
           sameAs: [

@@ -1,20 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal } from "@/components/reveal";
-import { profile, services } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Hire Valentine Onyenobi, Data Analyst" },
+      { title: "Contact — Hire Valentine Onyenobi, Business & Data Analyst" },
       {
         name: "description",
         content:
-          "Get in touch with Valentine Onyenobi for data analyst roles, BI dashboard builds or business consulting engagements. Based in London, working globally.",
+          "Get in touch with Valentine Onyenobi for professional engagements in business strategy, data analysis, business intelligence, operations and process improvement, consulting and data-driven decision support.",
       },
-      { property: "og:title", content: "Contact — Valentine Onyenobi" },
+      { property: "og:title", content: "Contact — Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
         content: "Data analysis, BI dashboards and consulting. Let's talk about your data.",
@@ -157,12 +157,6 @@ function Contact() {
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="h-4 w-4 shrink-0 text-signal" />
-                  <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="hover:text-signal">
-                    {profile.phone}
-                  </a>
-                </li>
-                <li className="flex items-center gap-3">
                   <MapPin className="h-4 w-4 shrink-0 text-signal" />
                   {profile.location}
                 </li>
@@ -195,14 +189,10 @@ function Contact() {
           <Reveal delay={200}>
             <div className="card-surface p-6">
               <p className="mono-label">What I take on</p>
-              <ul className="mt-5 space-y-3">
-                {services.map((s) => (
-                  <li key={s.title} className="flex gap-3 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
-                    {s.title}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                I work with organisations, founders and teams on strategy, analytics, business
+                intelligence, operational improvement and data-driven decision-making.
+              </p>
             </div>
           </Reveal>
         </div>
