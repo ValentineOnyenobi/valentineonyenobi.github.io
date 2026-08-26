@@ -170,7 +170,7 @@ function ProjectsIndex() {
                     ))}
                   </div>
                   <div className="mt-5 flex items-center gap-2 border-t border-border pt-4 font-mono text-[11px] text-signal">
-                    Case study
+                    VIEW CASE STUDY
                     <ArrowRight className="h-3 w-3" />
                   </div>
                 </Link>
@@ -249,7 +249,7 @@ function FeaturedCaseStudyCard({ caseStudy: c, index }: { caseStudy: CaseStudy; 
         ))}
       </div>
       <div className="mt-7 flex items-center gap-2 border-t border-border pt-5 font-mono text-[11px] uppercase tracking-widest text-signal">
-        View Case Study
+        VIEW CASE STUDY
         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
       </div>
     </Link>
