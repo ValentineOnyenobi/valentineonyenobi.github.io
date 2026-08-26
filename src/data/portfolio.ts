@@ -116,6 +116,9 @@ export const portfolioFilters = [
   "Strategy & Consulting",
   "Operations",
   "Financial Services",
+  "Venture & Systems",
+  "Project Delivery",
+  "Workforce",
   "Data & BI",
   "Machine Learning",
   "Tableau",
@@ -126,19 +129,439 @@ export type PortfolioFilter = (typeof portfolioFilters)[number];
 export type CaseStudyCategory = Exclude<PortfolioFilter, "All">;
 
 // Featured professional case studies (strategy / consulting / operations /
-// financial services / business transformation). Intentionally empty for now -
-// entries will be added as the real case studies are written. Each entry is
-// designed to later expand into the long format:
-// Context → Problem → Constraints → What I Did → Outcome / Value → Reflection.
+// financial services / business transformation). Each entry expands into the
+// long format: Context → Problem → What I Worked On → Approach → Outcome → Role.
 export type CaseStudy = {
   slug: string;
   title: string;
+  organisation: string;
   categories: CaseStudyCategory[];
+  displayCategories: string[];
   context: string;
   capabilities: string[];
+  executiveSummary: string;
+  status?: string;
+  confidentiality?: string;
+  problem: string;
+  workedOn?: string[];
+  approach?: { title: string; body: string }[];
+  architecture?: { title: string; steps: string[] };
+  riskFramework?: string[];
+  processFlow?: { title: string; steps: string[] };
+  evidence?: { value: string; label: string; note?: string }[];
+  outcome: string;
+  demonstrates: string[];
+  role: string;
+  reflection?: string;
 };
 
-export const caseStudies: CaseStudy[] = [];
+export const caseStudies: CaseStudy[] = [
+  {
+    slug: "kajco-credit-trust-infrastructure",
+    title: "Building a Data-Driven Credit & Trust Infrastructure",
+    organisation: "Kajco Finance",
+    categories: ["Financial Services", "Venture & Systems", "Strategy & Consulting"],
+    displayCategories: ["Financial Services", "Data Strategy", "Product", "Risk", "Venture Building"],
+    context:
+      "Developing a structured decision-making layer that turns fragmented commercial knowledge into credit and financial-services infrastructure for emerging-market commerce.",
+    capabilities: [
+      "Strategic product development",
+      "Data strategy",
+      "Credit decisioning",
+      "Behavioural intelligence",
+      "Financial-services thinking",
+      "Systems architecture",
+      "Venture building",
+      "Cross-functional execution",
+    ],
+    executiveSummary:
+      "Kajco was established around a problem in emerging-market commerce: valuable information about trust and reliability is created through everyday merchant and customer relationships, but much of that information remains fragmented and difficult for formal financial systems to use.",
+    status: "Pre-commercial deployment",
+    problem:
+      "The underlying information gap can be expressed as: Commercial activity → trust is created → behaviour is observed → information remains fragmented → formal systems cannot fully use it. The challenge was to turn that fragmented commercial knowledge into a structured decision-making layer that could support credit and financial-services applications.",
+    workedOn: [
+      "merchant onboarding",
+      "customer identification and verification",
+      "commercial and behavioural information",
+      "credit assessment",
+      "behavioural intelligence",
+      "repayment processes",
+      "merchant operating structures",
+      "reporting and reconciliation",
+      "operational controls",
+      "product and operating architecture",
+      "regulatory preparation",
+      "integration planning",
+    ],
+    approach: [
+      {
+        title: "Behavioural Intelligence",
+        body: "A major part of the work was developing a behavioural framework capable of capturing information associated with responsibility, consistency, obligations and responses to trust. Trustline incorporates a progression mechanism through which positive and negative behavioural events can become part of a customer's evolving behavioural record. The wider model also considers commercial activity such as purchasing behaviour, transaction consistency and merchant relationships. Detailed scoring logic, proprietary rules and commercial mechanics are intentionally not disclosed publicly.",
+      },
+      {
+        title: "Product & Operating Development",
+        body: "Kajco's development has extended beyond the customer-facing product. The MVP architecture covers customer, field-officer, merchant and administrative workflows, identity verification, transaction processes, eligibility, repayment, POS functionality, offline operation, synchronisation, reporting, reconciliation and operational controls. The venture has progressed through: Research → Problem Definition → Product Architecture → MVP Development → Integration Design → Behavioural Intelligence → Operating Controls → Regulatory Preparation → Intellectual Property → Deployment Preparation.",
+      },
+    ],
+    architecture: {
+      title: "Strategic Architecture",
+      steps: [
+        "Identity",
+        "Commercial Behaviour",
+        "Behavioural Intelligence",
+        "Financial Information",
+        "Lending Infrastructure",
+        "Repayment",
+      ],
+    },
+    outcome:
+      "Kajco has moved beyond the conceptual stage. The product architecture, Trustline structure, technology integrations, regulatory foundations and operating framework have been developed. Rather than building lending, identity verification and payment infrastructure from scratch, Kajco integrates established specialist providers across those functions, while developing its own application, data and intelligence layers. The venture is currently at pre-commercial deployment. The next major proof point is controlled live deployment, generation of real-world evidence and continued refinement of the model.",
+    demonstrates: [
+      "Strategic product development",
+      "Data strategy",
+      "Credit decisioning",
+      "Behavioural intelligence",
+      "Financial-services thinking",
+      "Systems architecture",
+      "Venture building",
+      "Cross-functional execution",
+    ],
+    role: "I have been responsible for shaping the business model, product direction, data and intelligence approach, operating structure and cross-functional development required to move Kajco from problem definition through product and deployment preparation.",
+  },
+  {
+    slug: "kajco-regulatory-risk-foundations",
+    title: "Building Regulatory & Risk Foundations into a Digital Lending Platform",
+    organisation: "Kajco Finance",
+    categories: ["Financial Services", "Strategy & Consulting", "Venture & Systems"],
+    displayCategories: ["Financial Services", "Regulatory Strategy", "Risk", "Governance"],
+    context:
+      "Building regulatory, privacy, identity, consumer-protection, risk and operational requirements into a digital lending platform alongside the product and operating model.",
+    capabilities: [
+      "Regulatory strategy",
+      "Risk management",
+      "Governance",
+      "Data protection",
+      "Financial services",
+      "Product thinking",
+      "Operational controls",
+      "Stakeholder coordination",
+    ],
+    executiveSummary:
+      "Building a digital lending platform requires more than a functioning product. Regulatory, privacy, identity, consumer-protection, risk and operational requirements all influence how the platform can operate. For Kajco, these considerations were developed alongside the product and operating model rather than treated as a separate compliance exercise.",
+    status: "Pre-commercial deployment",
+    problem:
+      "The challenge was to establish an operating foundation in which Product → Data → Risk → Governance → Operations could work together. That meant considering not only what the product should do, but how information should be handled, participants verified, activities traced and operational risks controlled.",
+    workedOn: [
+      "moneylending authorisation",
+      "digital-lending regulatory requirements",
+      "data protection and privacy",
+      "identity verification",
+      "data governance",
+      "compliance review",
+      "auditability and traceability",
+      "operational controls",
+      "fraud and risk considerations",
+    ],
+    approach: [
+      {
+        title: "Risk & Control Framework",
+        body: "The control environment considers: Customer identity, Merchant identity, Geolocation, Device identification, Transaction traceability, Repayment, Fraud detection, Officer accountability, Audit trails, Reconciliation, Escalation. These controls are intended to make operational activity identifiable, traceable and reviewable rather than simply adding documentation around the product.",
+      },
+      {
+        title: "Regulatory Thinking as Product Thinking",
+        body: "One of the key lessons from the work is that regulation cannot be separated completely from product design. Identity requirements affect onboarding. Data-protection requirements affect information flows. Audit requirements affect record-keeping. Risk controls affect operational workflows. This means regulatory requirements can shape the product itself rather than simply sitting alongside it.",
+      },
+      {
+        title: "Designing for Responsible Operations",
+        body: "The merchant model also incorporates performance-sensitive operating structures. Merchant capacity is intended to evolve with portfolio performance rather than remain permanently fixed, creating a link between observed performance and future operating capacity. Detailed commercial terms and proprietary operating mechanics are intentionally not disclosed publicly.",
+      },
+    ],
+    riskFramework: [
+      "Customer identity",
+      "Merchant identity",
+      "Geolocation",
+      "Device identification",
+      "Transaction traceability",
+      "Repayment",
+      "Fraud detection",
+      "Officer accountability",
+      "Audit trails",
+      "Reconciliation",
+      "Escalation",
+    ],
+    outcome:
+      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work, including regulatory preparation, data-governance structures, identity controls, auditability and operational risk controls. Kajco Lending Services Limited received FCCPC approval in connection with the Kajco Credit App. The venture remains at pre-commercial deployment, with controlled deployment, evidence generation and refinement representing the next stage.",
+    demonstrates: [
+      "Regulatory strategy",
+      "Risk management",
+      "Governance",
+      "Data protection",
+      "Financial services",
+      "Product thinking",
+      "Operational controls",
+      "Stakeholder coordination",
+    ],
+    role: "I led the integration of regulatory, governance, risk and operational considerations into the wider Kajco product and business architecture, working across strategic, product and execution requirements.",
+  },
+  {
+    slug: "workforce-performance-retention-onboarding",
+    title: "Workforce Performance, Retention & Onboarding Improvement",
+    organisation: "Confidential SME Client — Nigeria",
+    categories: ["Strategy & Consulting", "Operations"],
+    displayCategories: ["Strategy & Consulting", "Operations", "Workforce"],
+    context:
+      "Creating stronger processes around people so employees could enter the organisation effectively, understand expectations and develop within a more structured operating environment.",
+    capabilities: [
+      "Workforce strategy",
+      "Consulting",
+      "Process improvement",
+      "Onboarding design",
+      "Training",
+      "Retention",
+      "Operational performance",
+      "Stakeholder management",
+    ],
+    executiveSummary:
+      "The engagement involved an SME where workforce performance, retention and operational consistency were important to the organisation's ability to deliver effectively. The challenge was not simply recruitment. It was creating stronger processes around people so employees could enter the organisation effectively, understand expectations and develop within a more structured operating environment.",
+    confidentiality: "Confidential SME Client — Nigeria",
+    problem:
+      "The organisation needed a more consistent approach to: Onboarding → Training → Role clarity → Performance → Retention. The challenge was to strengthen these connections without introducing unnecessary complexity into an SME operating environment.",
+    workedOn: [
+      "Workforce Performance",
+      "Onboarding",
+      "Training",
+      "Retention",
+      "Operational Improvement",
+    ],
+    approach: [
+      {
+        title: "The Approach",
+        body: "The work was based on a simple principle: People performance is influenced by the environment in which people work. That meant looking beyond individual performance and considering whether the surrounding processes, expectations, training and management practices supported people effectively.",
+      },
+    ],
+    processFlow: {
+      title: "Workforce Process",
+      steps: ["Onboarding", "Training", "Role Clarity", "Performance", "Retention"],
+    },
+    outcome:
+      "The engagement established a more structured approach to workforce onboarding, training and operational support, connecting people processes more directly to organisational performance. Client-specific performance metrics are not disclosed because they are not available in the underlying professional record.",
+    demonstrates: [
+      "Workforce strategy",
+      "Consulting",
+      "Process improvement",
+      "Onboarding design",
+      "Training",
+      "Retention",
+      "Operational performance",
+      "Stakeholder management",
+    ],
+    role: "I led operational improvement initiatives and worked on workforce performance, retention, onboarding and training programmes as part of the consulting engagement.",
+    reflection: "People performance is influenced by the environment in which people work.",
+  },
+  {
+    slug: "administrative-operation-digital-workflows",
+    title: "Transforming an Administrative Operation Through Digital Workflows",
+    organisation: "Confidential Organisation — UAE",
+    categories: ["Operations", "Strategy & Consulting"],
+    displayCategories: ["Operations", "Process Improvement", "Digital Transformation"],
+    context:
+      "Improving how work moved through an administrative operation by introducing more effective digital workflows and strengthening supporting processes.",
+    capabilities: [
+      "Process improvement",
+      "Workflow redesign",
+      "Digital transformation",
+      "Operational efficiency",
+      "Procurement",
+      "Vendor management",
+      "Cost control",
+      "Implementation",
+    ],
+    executiveSummary:
+      "The organisation operated within an administrative environment where effective coordination, information handling, procurement and project support were essential to day-to-day delivery. The opportunity was to improve how work moved through the operation by introducing more effective digital workflows and strengthening supporting processes.",
+    confidentiality: "Confidential Organisation — UAE",
+    problem:
+      "The underlying challenge was operational friction. Manual and fragmented processes can create repetitive administrative work, slower information movement, unclear ownership, avoidable coordination effort, inconsistent execution and reduced visibility. The objective was therefore to improve the workflow itself, rather than simply asking people to work harder.",
+    workedOn: [
+      "implementing digital workflows",
+      "improving administrative processes",
+      "coordinating operational activity",
+      "managing vendor relationships",
+      "supporting procurement",
+      "strengthening the connection between administration and project delivery",
+    ],
+    approach: [
+      {
+        title: "Digital Workflow Transformation",
+        body: "The intervention focused on moving operational activity away from unnecessary manual handling toward more structured processes. The aim was to make work easier to coordinate, reduce friction and improve consistency.",
+      },
+      {
+        title: "Procurement & Vendor Management",
+        body: "Operational improvement also extended to external suppliers. I managed vendor contracts and procurement activities with a focus on cost control, supplier coordination and operating efficiency. Operational improvement is not limited to internal processes; it also includes how an organisation manages external dependencies.",
+      },
+    ],
+    processFlow: {
+      title: "Operating Environment",
+      steps: ["Workflow", "Information", "Responsibility", "Coordination", "Output"],
+    },
+    evidence: [
+      {
+        value: "~25%",
+        label: "Increase in office productivity",
+        note: "Following digital workflow implementation",
+      },
+      {
+        value: "~15%",
+        label: "Reduction in operating costs",
+        note: "Through vendor and procurement management",
+      },
+    ],
+    outcome:
+      "The documented results included approximately 25% increase in office productivity following digital workflow implementation, and approximately 15% reduction in operating costs through vendor and procurement management.",
+    demonstrates: [
+      "Process improvement",
+      "Workflow redesign",
+      "Digital transformation",
+      "Operational efficiency",
+      "Procurement",
+      "Vendor management",
+      "Cost control",
+      "Implementation",
+    ],
+    role: "I coordinated administrative operations, implemented digital workflows, managed vendor contracts and procurement, and supported project delivery and compliance.",
+    reflection:
+      "Operational improvement is not limited to internal processes; it also includes how an organisation manages external dependencies.",
+  },
+  {
+    slug: "project-visibility-operational-reporting",
+    title: "Improving Project Visibility Through Operational Reporting",
+    organisation: "Confidential Project Management Engagement — UAE",
+    categories: ["Project Delivery", "Operations"],
+    displayCategories: ["Project Delivery", "Operations", "Compliance", "Stakeholder Management"],
+    context:
+      "Introducing operational reporting to improve project tracking, compliance visibility and stakeholder communication across a project delivery environment.",
+    capabilities: [
+      "Project management",
+      "Operational reporting",
+      "Compliance tracking",
+      "Stakeholder management",
+      "Resource coordination",
+      "Delivery planning",
+      "Performance visibility",
+    ],
+    executiveSummary:
+      "Project delivery creates a large volume of information across schedules, resources, stakeholders, activities and compliance requirements. My role involved managing project schedules, resources and stakeholder communications and introducing operational reporting to improve project tracking and compliance.",
+    confidentiality: "Confidential Project Management Engagement — UAE",
+    problem:
+      "Project information can become fragmented across Plans, Activities, People, Stakeholders, Issues and Compliance requirements. When this happens, teams may have information without having useful visibility. The practical question becomes: Can stakeholders quickly understand where the project stands, what requires attention and whether delivery remains on track?",
+    workedOn: [
+      "Project Tracking",
+      "Resource Coordination",
+      "Stakeholder Communication",
+      "Operational Reporting",
+      "Compliance Tracking",
+    ],
+    approach: [
+      {
+        title: "The Approach",
+        body: "The reporting model connected: Plan → Activity → Progress → Issue → Stakeholder → Action. The purpose was not simply to produce more reporting. It was to create information that supported coordination, accountability and timely intervention.",
+      },
+      {
+        title: "Management Insight",
+        body: "Reporting is only useful when it changes what someone does next — not when it simply documents what already happened.",
+      },
+    ],
+    processFlow: {
+      title: "Reporting Flow",
+      steps: ["Plan", "Activity", "Progress", "Issue", "Stakeholder", "Action"],
+    },
+    outcome:
+      "The reporting approach improved project tracking and compliance visibility and provided a more structured basis for stakeholder communication and delivery coordination. Project-specific commercial or delivery metrics are not disclosed because they are not supported by the available professional record.",
+    demonstrates: [
+      "Project management",
+      "Operational reporting",
+      "Compliance tracking",
+      "Stakeholder management",
+      "Resource coordination",
+      "Delivery planning",
+      "Performance visibility",
+    ],
+    role: "I managed project schedules, resources and stakeholder communications, introduced operational reporting and supported workforce coordination through proactive planning and communication.",
+    reflection:
+      "Reporting is only useful when it changes what someone does next — not when it simply documents what already happened.",
+  },
+  {
+    slug: "business-strategy-growth-planning",
+    title: "Business Strategy, Business Model Analysis & Growth Planning",
+    organisation: "Confidential SME / Property Management Client — Nigeria",
+    categories: ["Strategy & Consulting"],
+    displayCategories: ["Strategy & Consulting", "Business Analysis", "Growth"],
+    context:
+      "Helping organisations understand their current position, improve how they operate and identify opportunities for growth across SME and property-management environments.",
+    capabilities: [
+      "Business strategy",
+      "Business-model analysis",
+      "Growth planning",
+      "Business development",
+      "Consulting",
+      "Opportunity assessment",
+      "Strategic decision support",
+    ],
+    executiveSummary:
+      "My strategy and consulting work has involved helping organisations understand their current position, improve how they operate and identify opportunities for growth. This has included work across SME and property-management environments, where business development, operating performance and strategic planning often need to be considered together.",
+    confidentiality: "Confidential SME / Property Management Client — Nigeria",
+    problem:
+      "Growth is rarely just a question of finding another opportunity. A business also needs to understand whether the opportunity fits the existing model, what capabilities are required, what operational constraints exist, what needs to change, what should be prioritised and how the strategy can realistically be executed. The real strategic question is therefore: Which opportunities make sense for the organisation given its current position and capabilities?",
+    workedOn: [
+      "business strategy development",
+      "business-model analysis",
+      "strategic planning",
+      "business development",
+      "process improvement",
+      "operational performance",
+      "identifying opportunities for growth and expansion",
+      "supporting business development and client growth across SME and property-management portfolios",
+    ],
+    approach: [
+      {
+        title: "The Strategic Approach",
+        body: "The work connected: Current Position → Business Model → Performance → Opportunity → Constraint → Strategic Priority. Rather than treating strategy as a document produced at the end, the focus was on connecting strategic choices to the organisation's operating reality.",
+      },
+      {
+        title: "Business Model Analysis",
+        body: "The analytical side of this work created a bridge between business context and evidence: Business question → Business model → Data / evidence → Insight → Strategic decision. This helped turn broad questions about performance and growth into more structured strategic considerations.",
+      },
+      {
+        title: "Strategic Insight",
+        body: "A strategy becomes useful when it connects a business question to a decision that can actually be executed. That means recommendations need to reflect not only the opportunity itself, but the organisation's resources, processes, capabilities and ability to deliver.",
+      },
+    ],
+    processFlow: {
+      title: "Strategy Framework",
+      steps: [
+        "Current Position",
+        "Business Model",
+        "Performance",
+        "Opportunity",
+        "Constraint",
+        "Strategic Priority",
+      ],
+    },
+    outcome:
+      "The work supported strategic planning, business development, process improvement and the identification of growth opportunities across the organisations and portfolios involved. Specific client-level growth or revenue figures are not presented because they are not documented in the available professional record.",
+    demonstrates: [
+      "Business strategy",
+      "Business-model analysis",
+      "Growth planning",
+      "Business development",
+      "Consulting",
+      "Opportunity assessment",
+      "Strategic decision support",
+    ],
+    role: "I have worked across business strategy, business development, operations and analytical business-model analysis, combining commercial context with structured analysis to support strategic decisions.",
+    reflection:
+      "A strategy becomes useful when it connects a business question to a decision that can actually be executed.",
+  },
+];
 
 // Maps a technical project's existing category onto the portfolio-wide filters.
 export function projectFiltersFor(p: Project): CaseStudyCategory[] {
