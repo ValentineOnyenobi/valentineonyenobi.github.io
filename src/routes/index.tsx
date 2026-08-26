@@ -3,6 +3,7 @@ import { ArrowRight, Github, Linkedin } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import { Reveal } from "@/components/reveal";
 import {
+  caseStudies,
   howIWork,
   profile,
   projects,
@@ -12,6 +13,11 @@ import {
   skillGroups,
   strengths,
 } from "@/data/portfolio";
+
+const featuredStudy = caseStudies.find((c) => c.slug === "kajco-credit-trust-infrastructure")!;
+const previewProjects = ["marketing-analysis", "supply-chain-dashboard"].map(
+  (slug) => projects.find((p) => p.slug === slug)!,
+);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -331,21 +337,61 @@ function Home() {
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2 className="max-w-xl text-3xl font-bold sm:text-4xl">
-                Detailed case studies live in Projects
-              </h2>
+              <div>
+                <p className="mono-label">Featured Work</p>
+                <h2 className="mt-4 max-w-xl text-3xl font-bold sm:text-4xl">
+                  A snapshot of the business problems I solve and the analytical work behind them
+                </h2>
+              </div>
               <Link
                 to="/projects"
                 className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal"
               >
-                All {projects.length} projects
+                View All {caseStudies.length + projects.length} Projects
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {projects.slice(0, 3).map((p, i) => (
-              <Reveal key={p.slug} delay={i * 90}>
+
+          {/* Featured case study — high emphasis */}
+          <Reveal delay={80}>
+            <Link
+              to="/projects/$slug"
+              params={{ slug: featuredStudy.slug }}
+              className="card-surface group relative mt-10 block overflow-hidden p-7 md:p-10"
+            >
+              <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-signal/70 via-signal/30 to-transparent" />
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <span className="mono-label">Featured Case Study</span>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Financial Services", "Venture & Systems"].map((cat) => (
+                    <span
+                      key={cat}
+                      className="rounded-sm border border-signal/40 bg-signal/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-signal"
+                    >
+                      {cat}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <h3 className="mt-5 max-w-3xl font-display text-2xl font-semibold leading-snug md:text-3xl">
+                {featuredStudy.title}
+              </h3>
+              <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+                Developing a structured decision-making layer that connects commercial behaviour,
+                trust intelligence and financial infrastructure for emerging-market commerce.
+              </p>
+              <div className="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-signal">
+                View Case Study
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+          </Reveal>
+
+          {/* Two compact technical projects */}
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            {previewProjects.map((p, i) => (
+              <Reveal key={p.slug} delay={120 + i * 80}>
                 <Link
                   to="/projects/$slug"
                   params={{ slug: p.slug }}
@@ -359,7 +405,7 @@ function Home() {
                     {p.problem}
                   </p>
                   <div className="mt-6 flex items-center gap-2 border-t border-border pt-4 font-mono text-[11px] text-signal">
-                    Case study
+                    View Project
                     <ArrowRight className="h-3 w-3" />
                   </div>
                 </Link>
