@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import { certifications, profile, skillGroups } from "@/data/portfolio";
+import { profile, skillGroups } from "@/data/portfolio";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -29,34 +29,40 @@ function About() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
       <Reveal>
-        <p className="mono-label">About</p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-          About Valentine Onyenobi
+        <div className="flex items-center gap-4">
+          <span className="mono-label">About</span>
+          <span className="hidden h-px flex-1 max-w-24 bg-gradient-to-r from-signal/60 to-transparent sm:block" />
+        </div>
+        <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+          <span className="text-signal-gradient">About Valentine Onyenobi</span>
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Business & Data Analyst · Founder & Consultant
         </p>
       </Reveal>
 
-      <div className="mt-14 grid gap-12 lg:grid-cols-[1.6fr_1fr]">
-        <div className="space-y-12">
+      <div className="mt-16 grid gap-12 lg:grid-cols-[1.6fr_1fr]">
+        <div className="space-y-14">
           <Reveal delay={90}>
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                I am a Business & Data Analyst, Founder and Consultant working across business
-                strategy, data analytics, business intelligence, operations and financial services.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                My experience spans the UK, Nigeria and the UAE, and my career has developed across
-                administration, financial services, operations, project management, strategy,
-                consulting and data analytics. That progression has shaped how I approach problems
-                today: I combine an understanding of how businesses operate with the ability to work
-                directly with data and translate evidence into practical business decisions.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                I am most interested in the space between a business problem and the decision that
-                needs to be made.
-              </p>
+            <div className="relative border-l border-signal/30 bg-surface/30 pl-6 md:pl-8">
+              <span className="absolute -left-px top-0 h-16 w-px bg-gradient-to-b from-signal via-signal/60 to-transparent" />
+              <div className="space-y-5">
+                <p className="text-lg leading-relaxed text-foreground md:text-xl">
+                  I am a Business & Data Analyst, Founder and Consultant working across business
+                  strategy, data analytics, business intelligence, operations and financial services.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  My experience spans the UK, Nigeria and the UAE, and my career has developed across
+                  administration, financial services, operations, project management, strategy,
+                  consulting and data analytics. That progression has shaped how I approach problems
+                  today: I combine an understanding of how businesses operate with the ability to work
+                  directly with data and translate evidence into practical business decisions.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  I am most interested in the space between a business problem and the decision that
+                  needs to be made.
+                </p>
+              </div>
             </div>
           </Reveal>
 
@@ -256,29 +262,15 @@ function About() {
             </div>
           </Reveal>
 
-          <Reveal delay={200}>
-            <div className="card-surface p-6">
-              <p className="mono-label">Certifications</p>
-              <ul className="mt-4 space-y-3">
-                {certifications.map((c) => (
-                  <li key={c} className="flex gap-3 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-
           {skillGroups.slice(0, 2).map((g, i) => (
             <Reveal key={g.name} delay={280 + i * 90}>
-              <div className="card-surface p-6">
+              <div className="card-surface group p-6">
                 <p className="mono-label">{g.name}</p>
-                <ul className="mt-4 flex flex-wrap gap-2">
+                <ul className="mt-5 flex flex-wrap gap-2">
                   {g.items.map((item) => (
                     <li
                       key={item}
-                      className="rounded-sm border border-border bg-surface-strong px-2.5 py-1.5 font-mono text-[11px] text-muted-foreground"
+                      className="rounded-sm border border-border/80 bg-surface-strong px-3 py-1.5 font-mono text-[11px] text-muted-foreground transition-colors group-hover:border-signal/30 group-hover:text-foreground"
                     >
                       {item}
                     </li>
