@@ -109,6 +109,49 @@ export type Project = {
   metric: { label: string; value: string };
 };
 
+// Portfolio-wide filter categories. These span both the featured professional
+// case studies and the technical projects, and an item can belong to several.
+export const portfolioFilters = [
+  "All",
+  "Strategy & Consulting",
+  "Operations",
+  "Financial Services",
+  "Data & BI",
+  "Machine Learning",
+  "Tableau",
+] as const;
+
+export type PortfolioFilter = (typeof portfolioFilters)[number];
+
+export type CaseStudyCategory = Exclude<PortfolioFilter, "All">;
+
+// Featured professional case studies (strategy / consulting / operations /
+// financial services / business transformation). Intentionally empty for now -
+// entries will be added as the real case studies are written. Each entry is
+// designed to later expand into the long format:
+// Context → Problem → Constraints → What I Did → Outcome / Value → Reflection.
+export type CaseStudy = {
+  slug: string;
+  title: string;
+  categories: CaseStudyCategory[];
+  context: string;
+  capabilities: string[];
+};
+
+export const caseStudies: CaseStudy[] = [];
+
+// Maps a technical project's existing category onto the portfolio-wide filters.
+export function projectFiltersFor(p: Project): CaseStudyCategory[] {
+  switch (p.category) {
+    case "Machine Learning":
+      return ["Machine Learning"];
+    case "Power BI":
+      return ["Data & BI"];
+    case "Tableau":
+      return ["Tableau"];
+  }
+}
+
 export const projects: Project[] = [
   {
     slug: "marketing-analysis",
