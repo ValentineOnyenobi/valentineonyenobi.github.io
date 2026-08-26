@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import { Reveal } from "@/components/reveal";
+import { socialMeta } from "@/lib/og";
 import {
   caseStudies,
   howIWork,
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta("/"),
     ],
   }),
   component: Home,

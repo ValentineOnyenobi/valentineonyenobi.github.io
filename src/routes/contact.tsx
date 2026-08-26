@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal } from "@/components/reveal";
 import { profile } from "@/data/portfolio";
+import { socialMeta } from "@/lib/og";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta("/contact"),
     ],
   }),
   component: Contact,

@@ -12,6 +12,7 @@ import {
   type FeaturedFilter,
   type TechnicalFilter,
 } from "@/data/portfolio";
+import { socialMeta } from "@/lib/og";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/projects/")({
@@ -31,6 +32,7 @@ export const Route = createFileRoute("/projects/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta("/projects"),
     ],
   }),
   component: ProjectsIndex,

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
 import { certifications, education, experience } from "@/data/portfolio";
+import { socialMeta } from "@/lib/og";
 
 export const Route = createFileRoute("/experience")({
   head: () => ({
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/experience")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta("/experience"),
     ],
   }),
   component: Experience,

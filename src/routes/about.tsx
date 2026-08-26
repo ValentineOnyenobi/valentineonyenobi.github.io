@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { profile } from "@/data/portfolio";
+import { socialMeta } from "@/lib/og";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta("/about"),
     ],
   }),
   component: About,
