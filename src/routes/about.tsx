@@ -264,13 +264,13 @@ function About() {
 
           {skillGroups.slice(0, 2).map((g, i) => (
             <Reveal key={g.name} delay={280 + i * 90}>
-              <div className="card-surface p-6">
+              <div className="card-surface group p-6">
                 <p className="mono-label">{g.name}</p>
-                <ul className="mt-4 flex flex-wrap gap-2">
+                <ul className="mt-5 flex flex-wrap gap-2">
                   {g.items.map((item) => (
                     <li
                       key={item}
-                      className="rounded-sm border border-border bg-surface-strong px-2.5 py-1.5 font-mono text-[11px] text-muted-foreground"
+                      className="rounded-sm border border-border/80 bg-surface-strong px-3 py-1.5 font-mono text-[11px] text-muted-foreground transition-colors group-hover:border-signal/30 group-hover:text-foreground"
                     >
                       {item}
                     </li>
