@@ -1,7 +1,7 @@
 export const profile = {
   name: "Valentine Onyenobi",
   role: "Business & Data Analyst",
-  disciplines: "Strategy · Data · Business Intelligence · Operations",
+  disciplines: "STRATEGY · DATA · BUSINESS INTELLIGENCE · OPERATIONS",
   tagline:
     "I help organisations understand performance, solve complex business problems and make better decisions - combining strategic thinking with hands-on analytical capability.",
   location: "London, UK",
