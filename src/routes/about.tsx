@@ -29,16 +29,19 @@ function About() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
       <Reveal>
-        <p className="mono-label">About</p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-          About Valentine Onyenobi
+        <div className="flex items-center gap-4">
+          <span className="mono-label">About</span>
+          <span className="hidden h-px flex-1 max-w-24 bg-gradient-to-r from-signal/60 to-transparent sm:block" />
+        </div>
+        <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+          <span className="text-signal-gradient">About Valentine Onyenobi</span>
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Business & Data Analyst · Founder & Consultant
         </p>
       </Reveal>
 
-      <div className="mt-14 grid gap-12 lg:grid-cols-[1.6fr_1fr]">
+      <div className="mt-16 grid gap-12 lg:grid-cols-[1.6fr_1fr]">
         <div className="space-y-12">
           <Reveal delay={90}>
             <div className="space-y-6">
