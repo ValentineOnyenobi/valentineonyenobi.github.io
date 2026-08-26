@@ -3,24 +3,30 @@ import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { LiveDashboard } from "@/components/live-dashboard";
-import { projects, type ProjectCategory } from "@/data/portfolio";
+import {
+  caseStudies,
+  portfolioFilters,
+  projectFiltersFor,
+  projects,
+  type CaseStudy,
+  type PortfolioFilter,
+} from "@/data/portfolio";
 import { cn } from "@/lib/utils";
-
-const filters = ["All", "Machine Learning", "Power BI", "Tableau"] as const;
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Projects — Machine Learning, Power BI & Tableau | Valentine Onyenobi" },
+      { title: "Projects — Case Studies, Machine Learning, Power BI & Tableau | Valentine Onyenobi" },
       {
         name: "description",
         content:
-          "Nine analytics projects: XGBoost forecasting and classification models, Power BI supply chain and sales dashboards, and interactive Tableau market dashboards.",
+          "Featured case studies across strategy, consulting, operations and financial services, plus nine technical projects: XGBoost models, Power BI and Tableau dashboards.",
       },
       { property: "og:title", content: "Projects — Valentine Onyenobi" },
       {
         property: "og:description",
-        content: "Machine learning models and BI dashboards, with the reasoning attached.",
+        content:
+          "Featured case studies and hands-on machine learning / BI projects, with the reasoning attached.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,13 +36,20 @@ export const Route = createFileRoute("/projects/")({
 });
 
 function ProjectsIndex() {
-  const [active, setActive] = useState<(typeof filters)[number]>("All");
-  const visible = projects.filter((p) => active === "All" || p.category === active);
+  const [active, setActive] = useState<PortfolioFilter>("All");
 
-  const counts = (c: (typeof filters)[number]) =>
-    c === "All"
-      ? projects.length
-      : projects.filter((p) => p.category === (c as ProjectCategory)).length;
+  const visibleCaseStudies = caseStudies.filter(
+    (c) => active === "All" || c.categories.includes(active),
+  );
+  const visibleProjects = projects.filter(
+    (p) => active === "All" || projectFiltersFor(p).includes(active),
+  );
+
+  const counts = (f: PortfolioFilter) =>
+    f === "All"
+      ? caseStudies.length + projects.length
+      : caseStudies.filter((c) => c.categories.includes(f)).length +
+        projects.filter((p) => projectFiltersFor(p).includes(f)).length;
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
@@ -53,7 +66,7 @@ function ProjectsIndex() {
 
       <Reveal delay={80}>
         <div className="mt-10 flex flex-wrap gap-2">
-          {filters.map((f) => (
+          {portfolioFilters.map((f) => (
             <button
               key={f}
               type="button"
@@ -73,43 +86,109 @@ function ProjectsIndex() {
         </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {visible.map((p, i) => (
-          <Reveal key={p.slug} delay={i * 60}>
-            <Link
-              to="/projects/$slug"
-              params={{ slug: p.slug }}
-              className="card-surface flex h-full flex-col p-6"
-            >
-              <div className="flex items-center justify-between">
-                <span className="mono-label">{p.category}</span>
-                <span className="font-mono text-[11px] text-muted-foreground">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-              <h2 className="mt-4 font-display text-lg font-semibold leading-snug">{p.title}</h2>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {p.problem}
-              </p>
-              <div className="mt-5 flex flex-wrap gap-1.5">
-                {p.tools.slice(0, 3).map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-sm border border-border bg-surface-strong px-2 py-1 font-mono text-[10px] text-muted-foreground"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-5 flex items-center gap-2 border-t border-border pt-4 font-mono text-[11px] text-signal">
-                Case study
-                <ArrowRight className="h-3 w-3" />
-              </div>
-            </Link>
-          </Reveal>
-        ))}
-      </div>
+      {/* SECTION 1 — Featured Case Studies */}
+      <section className="mt-20" aria-labelledby="featured-case-studies">
+        <Reveal>
+          <div className="flex items-center gap-4">
+            <span className="mono-label">Featured</span>
+            <span className="hidden h-px max-w-24 flex-1 bg-gradient-to-r from-signal/60 to-transparent sm:block" />
+          </div>
+          <h2
+            id="featured-case-studies"
+            className="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl"
+          >
+            Featured Case Studies
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            Real business problems, strategic decisions and practical solutions.
+          </p>
+        </Reveal>
 
+        {visibleCaseStudies.length > 0 ? (
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {visibleCaseStudies.map((c, i) => (
+              <Reveal key={c.slug} delay={i * 80}>
+                <FeaturedCaseStudyCard caseStudy={c} index={i} />
+              </Reveal>
+            ))}
+          </div>
+        ) : (
+          <Reveal delay={100}>
+            <div className="mt-10 rounded-lg border border-dashed border-border bg-surface/40 px-6 py-12 text-center">
+              <p className="mono-label">In preparation</p>
+              <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+                {active === "All"
+                  ? "Featured case studies from strategy, consulting, operations and financial services work are currently being prepared."
+                  : `No featured case studies in ${active} yet.`}
+              </p>
+            </div>
+          </Reveal>
+        )}
+      </section>
+
+      {/* SECTION 2 — Technical Projects */}
+      <section className="mt-24" aria-labelledby="technical-projects">
+        <Reveal>
+          <p className="mono-label">Hands-on</p>
+          <h2 id="technical-projects" className="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl">
+            Technical Projects
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            Hands-on analytical, business intelligence and machine-learning work.
+          </p>
+        </Reveal>
+
+        {visibleProjects.length > 0 ? (
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {visibleProjects.map((p, i) => (
+              <Reveal key={p.slug} delay={i * 60}>
+                <Link
+                  to="/projects/$slug"
+                  params={{ slug: p.slug }}
+                  className="card-surface flex h-full flex-col p-6"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="mono-label">{p.category}</span>
+                    <span className="font-mono text-[11px] text-muted-foreground">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-semibold leading-snug">
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {p.problem}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-1.5">
+                    {p.tools.slice(0, 3).map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-sm border border-border bg-surface-strong px-2 py-1 font-mono text-[10px] text-muted-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-5 flex items-center gap-2 border-t border-border pt-4 font-mono text-[11px] text-signal">
+                    Case study
+                    <ArrowRight className="h-3 w-3" />
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        ) : (
+          <Reveal delay={100}>
+            <div className="mt-10 rounded-lg border border-dashed border-border bg-surface/40 px-6 py-12 text-center">
+              <p className="text-sm text-muted-foreground">
+                No technical projects in {active} yet.
+              </p>
+            </div>
+          </Reveal>
+        )}
+      </section>
+
+      {/* Interactive dashboard */}
       <div className="mt-24">
         <Reveal>
           <p className="mono-label">Interactive</p>
@@ -129,5 +208,46 @@ function ProjectsIndex() {
         </Reveal>
       </div>
     </div>
+  );
+}
+
+function FeaturedCaseStudyCard({ caseStudy: c, index }: { caseStudy: CaseStudy; index: number }) {
+  return (
+    <article className="card-surface group relative flex h-full flex-col overflow-hidden p-7 md:p-9">
+      <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-signal/70 via-signal/30 to-transparent" />
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-1.5">
+          {c.categories.map((cat) => (
+            <span
+              key={cat}
+              className="rounded-sm border border-signal/40 bg-signal/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-signal"
+            >
+              {cat}
+            </span>
+          ))}
+        </div>
+        <span className="font-mono text-[11px] text-muted-foreground">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+      <h3 className="mt-5 font-display text-2xl font-semibold leading-snug md:text-[1.7rem]">
+        {c.title}
+      </h3>
+      <p className="mt-4 flex-1 leading-relaxed text-muted-foreground">{c.context}</p>
+      <div className="mt-6 flex flex-wrap gap-1.5">
+        {c.capabilities.map((cap) => (
+          <span
+            key={cap}
+            className="rounded-sm border border-border bg-surface-strong px-2.5 py-1 font-mono text-[10px] text-muted-foreground"
+          >
+            {cap}
+          </span>
+        ))}
+      </div>
+      <div className="mt-7 flex items-center gap-2 border-t border-border pt-5 font-mono text-[11px] uppercase tracking-widest text-signal">
+        View case study
+        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+      </div>
+    </article>
   );
 }
