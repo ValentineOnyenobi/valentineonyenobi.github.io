@@ -10,12 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Valentine Onyenobi is a London-based Business & Data Analyst with experience across strategy, consulting, analytics, business intelligence and operations in the UK, UAE and Nigeria.",
+          "Business & Data Analyst, Founder and Consultant working across strategy, data analytics, business intelligence, operations and financial services.",
       },
       { property: "og:title", content: "About — Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
-        content: "Analytics, consulting and fintech - the background behind the work.",
+        content:
+          "Business & Data Analyst, Founder and Consultant working across strategy, data analytics, business intelligence, operations and financial services.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
