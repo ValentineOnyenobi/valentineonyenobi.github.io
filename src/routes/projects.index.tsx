@@ -214,7 +214,7 @@ function ProjectsIndex() {
 function FeaturedCaseStudyCard({ caseStudy: c, index }: { caseStudy: CaseStudy; index: number }) {
   return (
     <Link
-      to="/case-studies/$slug"
+      to="/projects/$slug"
       params={{ slug: c.slug }}
       className="card-surface group relative flex h-full flex-col overflow-hidden p-7 md:p-9"
     >
@@ -249,7 +249,7 @@ function FeaturedCaseStudyCard({ caseStudy: c, index }: { caseStudy: CaseStudy; 
         ))}
       </div>
       <div className="mt-7 flex items-center gap-2 border-t border-border pt-5 font-mono text-[11px] uppercase tracking-widest text-signal">
-        View case study
+        View Case Study
         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
       </div>
     </Link>
