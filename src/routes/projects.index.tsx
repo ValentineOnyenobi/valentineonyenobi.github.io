@@ -213,7 +213,11 @@ function ProjectsIndex() {
 
 function FeaturedCaseStudyCard({ caseStudy: c, index }: { caseStudy: CaseStudy; index: number }) {
   return (
-    <article className="card-surface group relative flex h-full flex-col overflow-hidden p-7 md:p-9">
+    <Link
+      to="/case-studies/$slug"
+      params={{ slug: c.slug }}
+      className="card-surface group relative flex h-full flex-col overflow-hidden p-7 md:p-9"
+    >
       <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-signal/70 via-signal/30 to-transparent" />
       <div className="flex items-center justify-between gap-3">
         <div className="flex flex-wrap gap-1.5">
@@ -248,6 +252,6 @@ function FeaturedCaseStudyCard({ caseStudy: c, index }: { caseStudy: CaseStudy; 
         View case study
         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
       </div>
-    </article>
+    </Link>
   );
 }
