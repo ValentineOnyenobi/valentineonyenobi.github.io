@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { caseStudies } from "@/data/portfolio";
+import { socialMeta } from "@/lib/og";
 import {
   ArchitectureFlow,
   EvidenceCards,
@@ -29,6 +30,7 @@ export function caseStudyPage(slug: string) {
           { property: "og:description", content: study.executiveSummary },
           { property: "og:type", content: "article" },
           { name: "twitter:card", content: "summary_large_image" },
+          ...socialMeta(`/projects/${study.slug}`),
         ],
       };
     },

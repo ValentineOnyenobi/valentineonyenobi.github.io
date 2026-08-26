@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { projects } from "@/data/portfolio";
+import { socialMeta } from "@/lib/og";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -25,6 +26,7 @@ export const Route = createFileRoute("/projects/$slug")({
         { property: "og:description", content: project.problem },
         { property: "og:type", content: "article" },
         { name: "twitter:card", content: "summary_large_image" },
+        ...socialMeta(`/projects/${project.slug}`),
       ],
     };
   },
