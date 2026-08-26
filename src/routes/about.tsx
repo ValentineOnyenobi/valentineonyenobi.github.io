@@ -15,7 +15,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About — Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
-        content: "Analytics, consulting and fintech — the background behind the work.",
+        content: "Analytics, consulting and fintech - the background behind the work.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -170,7 +170,7 @@ function About() {
                   ))}
                 </ul>
                 <p className="leading-relaxed">
-                  That experience has reinforced my preference for practical strategy —
+                  That experience has reinforced my preference for practical strategy -
                   understanding the commercial objective first, then determining how data, processes,
                   analysis and technology can contribute to a useful solution.
                 </p>
