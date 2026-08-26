@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import { certifications, profile, skillGroups } from "@/data/portfolio";
+import { profile, skillGroups } from "@/data/portfolio";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
