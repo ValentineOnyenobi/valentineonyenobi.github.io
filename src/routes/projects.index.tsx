@@ -97,7 +97,7 @@ function ProjectsIndex() {
             id="featured-case-studies"
             className="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl"
           >
-            Featured Case Studies
+            Case Studies
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Real business problems, strategic decisions and practical solutions.
