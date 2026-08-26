@@ -304,7 +304,7 @@ export const caseStudies: CaseStudy[] = [
     role: "I led the integration of regulatory, governance, risk and operational considerations into the wider Kajco product and business architecture, working across strategic, product and execution requirements.",
   },
   {
-    slug: "workforce-performance-retention-onboarding",
+    slug: "workforce-retention-onboarding",
     title: "Workforce Performance, Retention & Onboarding Improvement",
     organisation: "Confidential SME Client — Nigeria",
     categories: ["Strategy & Consulting", "Operations"],
@@ -359,7 +359,7 @@ export const caseStudies: CaseStudy[] = [
     reflection: "People performance is influenced by the environment in which people work.",
   },
   {
-    slug: "administrative-operation-digital-workflows",
+    slug: "digital-workflow-transformation",
     title: "Transforming an Administrative Operation Through Digital Workflows",
     organisation: "Confidential Organisation — UAE",
     categories: ["Operations", "Strategy & Consulting"],
@@ -432,7 +432,7 @@ export const caseStudies: CaseStudy[] = [
       "Operational improvement is not limited to internal processes; it also includes how an organisation manages external dependencies.",
   },
   {
-    slug: "project-visibility-operational-reporting",
+    slug: "project-reporting-compliance",
     title: "Improving Project Visibility Through Operational Reporting",
     organisation: "Confidential Project Management Engagement — UAE",
     categories: ["Project Delivery", "Operations"],
