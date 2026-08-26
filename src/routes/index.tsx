@@ -3,6 +3,7 @@ import { ArrowRight, Github, Linkedin } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import { Reveal } from "@/components/reveal";
 import {
+  caseStudies,
   howIWork,
   profile,
   projects,
@@ -12,6 +13,11 @@ import {
   skillGroups,
   strengths,
 } from "@/data/portfolio";
+
+const featuredStudy = caseStudies.find((c) => c.slug === "kajco-credit-trust-infrastructure")!;
+const previewProjects = ["marketing-analysis", "supply-chain-dashboard"].map(
+  (slug) => projects.find((p) => p.slug === slug)!,
+);
 
 export const Route = createFileRoute("/")({
   head: () => ({

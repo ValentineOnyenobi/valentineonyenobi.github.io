@@ -5,11 +5,12 @@ import { Reveal } from "@/components/reveal";
 import { LiveDashboard } from "@/components/live-dashboard";
 import {
   caseStudies,
-  portfolioFilters,
-  projectFiltersFor,
+  featuredFilters,
   projects,
+  technicalFilters,
   type CaseStudy,
-  type PortfolioFilter,
+  type FeaturedFilter,
+  type TechnicalFilter,
 } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
@@ -36,20 +37,24 @@ export const Route = createFileRoute("/projects/")({
 });
 
 function ProjectsIndex() {
-  const [active, setActive] = useState<PortfolioFilter>("All");
+  // Fully independent filter states — one per collection.
+  const [featuredFilter, setFeaturedFilter] = useState<FeaturedFilter>("All");
+  const [technicalFilter, setTechnicalFilter] = useState<TechnicalFilter>("All");
 
   const visibleCaseStudies = caseStudies.filter(
-    (c) => active === "All" || c.categories.includes(active),
+    (c) => featuredFilter === "All" || c.categories.includes(featuredFilter),
   );
   const visibleProjects = projects.filter(
-    (p) => active === "All" || projectFiltersFor(p).includes(active),
+    (p) => technicalFilter === "All" || p.category === technicalFilter,
   );
 
-  const counts = (f: PortfolioFilter) =>
+  // Counts are per-collection only — never against the combined portfolio.
+  const featuredCount = (f: FeaturedFilter) =>
     f === "All"
-      ? caseStudies.length + projects.length
-      : caseStudies.filter((c) => c.categories.includes(f)).length +
-        projects.filter((p) => projectFiltersFor(p).includes(f)).length;
+      ? caseStudies.length
+      : caseStudies.filter((c) => c.categories.includes(f)).length;
+  const technicalCount = (f: TechnicalFilter) =>
+    f === "All" ? projects.length : projects.filter((p) => p.category === f).length;
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
@@ -62,27 +67,16 @@ function ProjectsIndex() {
           Each case study follows the same shape: the problem, the approach, the tools, and what it
           actually changed.
         </p>
-      </Reveal>
-
-      <Reveal delay={80}>
-        <div className="mt-10 flex flex-wrap gap-2">
-          {portfolioFilters.map((f) => (
-            <button
-              key={f}
-              type="button"
-              onClick={() => setActive(f)}
-              aria-pressed={active === f}
-              className={cn(
-                "rounded-sm border px-4 py-2 font-mono text-[11px] uppercase tracking-widest transition-colors",
-                active === f
-                  ? "border-signal bg-signal text-primary-foreground"
-                  : "border-border text-muted-foreground hover:border-signal/50 hover:text-signal",
-              )}
-            >
-              {f}
-              <span className="ml-2 opacity-60">{counts(f)}</span>
-            </button>
-          ))}
+        <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-widest">
+          <span className="text-signal">
+            {caseStudies.length + projects.length} Projects
+          </span>
+          <span className="text-muted-foreground">
+            Featured Case Studies - {String(caseStudies.length).padStart(2, "0")}
+          </span>
+          <span className="text-muted-foreground">
+            Technical Projects - {String(projects.length).padStart(2, "0")}
+          </span>
         </div>
       </Reveal>
 
@@ -97,11 +91,20 @@ function ProjectsIndex() {
             id="featured-case-studies"
             className="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl"
           >
-            Case Studies
+            Featured Case Studies
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Real business problems, strategic decisions and practical solutions.
           </p>
+        </Reveal>
+
+        <Reveal delay={60}>
+          <FilterBar
+            filters={featuredFilters}
+            active={featuredFilter}
+            onChange={setFeaturedFilter}
+            count={featuredCount}
+          />
         </Reveal>
 
         {visibleCaseStudies.length > 0 ? (
@@ -117,9 +120,9 @@ function ProjectsIndex() {
             <div className="mt-10 rounded-lg border border-dashed border-border bg-surface/40 px-6 py-12 text-center">
               <p className="mono-label">In preparation</p>
               <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                {active === "All"
+                {featuredFilter === "All"
                   ? "Featured case studies from strategy, consulting, operations and financial services work are currently being prepared."
-                  : `No featured case studies in ${active} yet.`}
+                  : `No featured case studies in ${featuredFilter} yet.`}
               </p>
             </div>
           </Reveal>
@@ -134,8 +137,17 @@ function ProjectsIndex() {
             Technical Projects
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Hands-on analytical, business intelligence and machine-learning work.
+            Hands-on data, business intelligence and machine-learning work.
           </p>
+        </Reveal>
+
+        <Reveal delay={60}>
+          <FilterBar
+            filters={technicalFilters}
+            active={technicalFilter}
+            onChange={setTechnicalFilter}
+            count={technicalCount}
+          />
         </Reveal>
 
         {visibleProjects.length > 0 ? (
@@ -181,7 +193,7 @@ function ProjectsIndex() {
           <Reveal delay={100}>
             <div className="mt-10 rounded-lg border border-dashed border-border bg-surface/40 px-6 py-12 text-center">
               <p className="text-sm text-muted-foreground">
-                No technical projects in {active} yet.
+                No technical projects in {technicalFilter} yet.
               </p>
             </div>
           </Reveal>
@@ -207,6 +219,40 @@ function ProjectsIndex() {
           </div>
         </Reveal>
       </div>
+    </div>
+  );
+}
+
+function FilterBar<T extends string>({
+  filters,
+  active,
+  onChange,
+  count,
+}: {
+  filters: readonly T[];
+  active: T;
+  onChange: (f: T) => void;
+  count: (f: T) => number;
+}) {
+  return (
+    <div className="mt-8 flex flex-wrap gap-2">
+      {filters.map((f) => (
+        <button
+          key={f}
+          type="button"
+          onClick={() => onChange(f)}
+          aria-pressed={active === f}
+          className={cn(
+            "rounded-sm border px-4 py-2 font-mono text-[11px] uppercase tracking-widest transition-colors",
+            active === f
+              ? "border-signal bg-signal text-primary-foreground"
+              : "border-border text-muted-foreground hover:border-signal/50 hover:text-signal",
+          )}
+        >
+          {f}
+          <span className="ml-2 opacity-60">{count(f)}</span>
+        </button>
+      ))}
     </div>
   );
 }
