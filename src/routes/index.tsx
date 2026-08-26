@@ -405,7 +405,7 @@ function Home() {
                     {p.problem}
                   </p>
                   <div className="mt-6 flex items-center gap-2 border-t border-border pt-4 font-mono text-[11px] text-signal">
-                    View Project
+                    VIEW CASE STUDY
                     <ArrowRight className="h-3 w-3" />
                   </div>
                 </Link>
