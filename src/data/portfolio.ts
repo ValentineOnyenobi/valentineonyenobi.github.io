@@ -109,9 +109,8 @@ export type Project = {
   metric: { label: string; value: string };
 };
 
-// Portfolio-wide filter categories. These span both the featured professional
-// case studies and the technical projects, and an item can belong to several.
-export const portfolioFilters = [
+// Featured Case Studies filters — fully independent from the technical filters.
+export const featuredFilters = [
   "All",
   "Strategy & Consulting",
   "Operations",
@@ -119,14 +118,16 @@ export const portfolioFilters = [
   "Venture & Systems",
   "Project Delivery",
   "Workforce",
-  "Data & BI",
-  "Machine Learning",
-  "Tableau",
 ] as const;
 
-export type PortfolioFilter = (typeof portfolioFilters)[number];
+export type FeaturedFilter = (typeof featuredFilters)[number];
 
-export type CaseStudyCategory = Exclude<PortfolioFilter, "All">;
+export type CaseStudyCategory = Exclude<FeaturedFilter, "All">;
+
+// Technical Projects filters — fully independent from the featured filters.
+export const technicalFilters = ["All", "Machine Learning", "Power BI", "Tableau"] as const;
+
+export type TechnicalFilter = (typeof technicalFilters)[number];
 
 // Featured professional case studies (strategy / consulting / operations /
 // financial services / business transformation). Each entry expands into the
@@ -307,7 +308,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "workforce-retention-onboarding",
     title: "Workforce Performance, Retention & Onboarding Improvement",
     organisation: "Confidential SME Client — Nigeria",
-    categories: ["Strategy & Consulting", "Operations"],
+    categories: ["Strategy & Consulting", "Operations", "Workforce"],
     displayCategories: ["Strategy & Consulting", "Operations", "Workforce"],
     context:
       "Creating stronger processes around people so employees could enter the organisation effectively, understand expectations and develop within a more structured operating environment.",
@@ -563,18 +564,8 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-// Maps a technical project's existing category onto the portfolio-wide filters.
-export function projectFiltersFor(p: Project): CaseStudyCategory[] {
-  switch (p.category) {
-    case "Machine Learning":
-      return ["Machine Learning"];
-    case "Power BI":
-      return ["Data & BI"];
-    case "Tableau":
-      return ["Tableau"];
-  }
-}
-
+// Technical projects are filtered directly by their category
+// (Machine Learning / Power BI / Tableau).
 export const projects: Project[] = [
   {
     slug: "marketing-analysis",
