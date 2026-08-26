@@ -14,7 +14,6 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies.$slug'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as ProjectsBusinessStrategyGrowthPlanningRouteImport } from './routes/projects.business-strategy-growth-planning'
@@ -47,11 +46,6 @@ const ExperienceRoute = ExperienceRouteImport.update({
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudiesSlugRoute = CaseStudiesSlugRouteImport.update({
-  id: '/case-studies/$slug',
-  path: '/case-studies/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
@@ -107,7 +101,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
   '/projects': typeof ProjectsRouteWithChildren
-  '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/business-strategy-growth-planning': typeof ProjectsBusinessStrategyGrowthPlanningRoute
   '/projects/digital-workflow-transformation': typeof ProjectsDigitalWorkflowTransformationRoute
@@ -122,7 +115,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
-  '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/business-strategy-growth-planning': typeof ProjectsBusinessStrategyGrowthPlanningRoute
   '/projects/digital-workflow-transformation': typeof ProjectsDigitalWorkflowTransformationRoute
@@ -139,7 +131,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
   '/projects': typeof ProjectsRouteWithChildren
-  '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/business-strategy-growth-planning': typeof ProjectsBusinessStrategyGrowthPlanningRoute
   '/projects/digital-workflow-transformation': typeof ProjectsDigitalWorkflowTransformationRoute
@@ -157,7 +148,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/experience'
     | '/projects'
-    | '/case-studies/$slug'
     | '/projects/$slug'
     | '/projects/business-strategy-growth-planning'
     | '/projects/digital-workflow-transformation'
@@ -172,7 +162,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/experience'
-    | '/case-studies/$slug'
     | '/projects/$slug'
     | '/projects/business-strategy-growth-planning'
     | '/projects/digital-workflow-transformation'
@@ -188,7 +177,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/experience'
     | '/projects'
-    | '/case-studies/$slug'
     | '/projects/$slug'
     | '/projects/business-strategy-growth-planning'
     | '/projects/digital-workflow-transformation'
@@ -205,7 +193,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ExperienceRoute: typeof ExperienceRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
-  CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -243,13 +230,6 @@ declare module '@tanstack/react-router' {
       path: '/projects'
       fullPath: '/projects'
       preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-studies/$slug': {
-      id: '/case-studies/$slug'
-      path: '/case-studies/$slug'
-      fullPath: '/case-studies/$slug'
-      preLoaderRoute: typeof CaseStudiesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/': {
@@ -349,7 +329,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ExperienceRoute: ExperienceRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
-  CaseStudiesSlugRoute: CaseStudiesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
