@@ -42,24 +42,27 @@ function About() {
       </Reveal>
 
       <div className="mt-16 grid gap-12 lg:grid-cols-[1.6fr_1fr]">
-        <div className="space-y-12">
+        <div className="space-y-14">
           <Reveal delay={90}>
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                I am a Business & Data Analyst, Founder and Consultant working across business
-                strategy, data analytics, business intelligence, operations and financial services.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                My experience spans the UK, Nigeria and the UAE, and my career has developed across
-                administration, financial services, operations, project management, strategy,
-                consulting and data analytics. That progression has shaped how I approach problems
-                today: I combine an understanding of how businesses operate with the ability to work
-                directly with data and translate evidence into practical business decisions.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                I am most interested in the space between a business problem and the decision that
-                needs to be made.
-              </p>
+            <div className="relative border-l border-signal/30 bg-surface/30 pl-6 md:pl-8">
+              <span className="absolute -left-px top-0 h-16 w-px bg-gradient-to-b from-signal via-signal/60 to-transparent" />
+              <div className="space-y-5">
+                <p className="text-lg leading-relaxed text-foreground md:text-xl">
+                  I am a Business & Data Analyst, Founder and Consultant working across business
+                  strategy, data analytics, business intelligence, operations and financial services.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  My experience spans the UK, Nigeria and the UAE, and my career has developed across
+                  administration, financial services, operations, project management, strategy,
+                  consulting and data analytics. That progression has shaped how I approach problems
+                  today: I combine an understanding of how businesses operate with the ability to work
+                  directly with data and translate evidence into practical business decisions.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  I am most interested in the space between a business problem and the decision that
+                  needs to be made.
+                </p>
+              </div>
             </div>
           </Reveal>
 
