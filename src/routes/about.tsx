@@ -243,7 +243,7 @@ function About() {
                 <div>
                   <dt className="font-mono text-[11px] text-muted-foreground">Focus</dt>
                   <dd className="mt-1">
-                    Business strategy, data analysis, business intelligence
+                    Business Strategy, Data Analysis, Business Intelligence
                   </dd>
                 </div>
                 <div>
