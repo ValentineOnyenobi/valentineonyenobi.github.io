@@ -17,6 +17,12 @@ import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies.$slug'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as ProjectsBusinessStrategyGrowthPlanningRouteImport } from './routes/projects.business-strategy-growth-planning'
+import { Route as ProjectsDigitalWorkflowTransformationRouteImport } from './routes/projects.digital-workflow-transformation'
+import { Route as ProjectsKajcoCreditTrustInfrastructureRouteImport } from './routes/projects.kajco-credit-trust-infrastructure'
+import { Route as ProjectsKajcoRegulatoryRiskFoundationsRouteImport } from './routes/projects.kajco-regulatory-risk-foundations'
+import { Route as ProjectsProjectReportingComplianceRouteImport } from './routes/projects.project-reporting-compliance'
+import { Route as ProjectsWorkforceRetentionOnboardingRouteImport } from './routes/projects.workforce-retention-onboarding'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +64,42 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ProjectsRoute,
 } as any)
+const ProjectsBusinessStrategyGrowthPlanningRoute =
+  ProjectsBusinessStrategyGrowthPlanningRouteImport.update({
+    id: '/business-strategy-growth-planning',
+    path: '/business-strategy-growth-planning',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
+const ProjectsDigitalWorkflowTransformationRoute =
+  ProjectsDigitalWorkflowTransformationRouteImport.update({
+    id: '/digital-workflow-transformation',
+    path: '/digital-workflow-transformation',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
+const ProjectsKajcoCreditTrustInfrastructureRoute =
+  ProjectsKajcoCreditTrustInfrastructureRouteImport.update({
+    id: '/kajco-credit-trust-infrastructure',
+    path: '/kajco-credit-trust-infrastructure',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
+const ProjectsKajcoRegulatoryRiskFoundationsRoute =
+  ProjectsKajcoRegulatoryRiskFoundationsRouteImport.update({
+    id: '/kajco-regulatory-risk-foundations',
+    path: '/kajco-regulatory-risk-foundations',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
+const ProjectsProjectReportingComplianceRoute =
+  ProjectsProjectReportingComplianceRouteImport.update({
+    id: '/project-reporting-compliance',
+    path: '/project-reporting-compliance',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
+const ProjectsWorkforceRetentionOnboardingRoute =
+  ProjectsWorkforceRetentionOnboardingRouteImport.update({
+    id: '/workforce-retention-onboarding',
+    path: '/workforce-retention-onboarding',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -67,6 +109,12 @@ export interface FileRoutesByFullPath {
   '/projects': typeof ProjectsRouteWithChildren
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/projects/business-strategy-growth-planning': typeof ProjectsBusinessStrategyGrowthPlanningRoute
+  '/projects/digital-workflow-transformation': typeof ProjectsDigitalWorkflowTransformationRoute
+  '/projects/kajco-credit-trust-infrastructure': typeof ProjectsKajcoCreditTrustInfrastructureRoute
+  '/projects/kajco-regulatory-risk-foundations': typeof ProjectsKajcoRegulatoryRiskFoundationsRoute
+  '/projects/project-reporting-compliance': typeof ProjectsProjectReportingComplianceRoute
+  '/projects/workforce-retention-onboarding': typeof ProjectsWorkforceRetentionOnboardingRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -76,6 +124,12 @@ export interface FileRoutesByTo {
   '/experience': typeof ExperienceRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/projects/business-strategy-growth-planning': typeof ProjectsBusinessStrategyGrowthPlanningRoute
+  '/projects/digital-workflow-transformation': typeof ProjectsDigitalWorkflowTransformationRoute
+  '/projects/kajco-credit-trust-infrastructure': typeof ProjectsKajcoCreditTrustInfrastructureRoute
+  '/projects/kajco-regulatory-risk-foundations': typeof ProjectsKajcoRegulatoryRiskFoundationsRoute
+  '/projects/project-reporting-compliance': typeof ProjectsProjectReportingComplianceRoute
+  '/projects/workforce-retention-onboarding': typeof ProjectsWorkforceRetentionOnboardingRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
@@ -87,6 +141,12 @@ export interface FileRoutesById {
   '/projects': typeof ProjectsRouteWithChildren
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/projects/business-strategy-growth-planning': typeof ProjectsBusinessStrategyGrowthPlanningRoute
+  '/projects/digital-workflow-transformation': typeof ProjectsDigitalWorkflowTransformationRoute
+  '/projects/kajco-credit-trust-infrastructure': typeof ProjectsKajcoCreditTrustInfrastructureRoute
+  '/projects/kajco-regulatory-risk-foundations': typeof ProjectsKajcoRegulatoryRiskFoundationsRoute
+  '/projects/project-reporting-compliance': typeof ProjectsProjectReportingComplianceRoute
+  '/projects/workforce-retention-onboarding': typeof ProjectsWorkforceRetentionOnboardingRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
@@ -99,6 +159,12 @@ export interface FileRouteTypes {
     | '/projects'
     | '/case-studies/$slug'
     | '/projects/$slug'
+    | '/projects/business-strategy-growth-planning'
+    | '/projects/digital-workflow-transformation'
+    | '/projects/kajco-credit-trust-infrastructure'
+    | '/projects/kajco-regulatory-risk-foundations'
+    | '/projects/project-reporting-compliance'
+    | '/projects/workforce-retention-onboarding'
     | '/projects/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -108,6 +174,12 @@ export interface FileRouteTypes {
     | '/experience'
     | '/case-studies/$slug'
     | '/projects/$slug'
+    | '/projects/business-strategy-growth-planning'
+    | '/projects/digital-workflow-transformation'
+    | '/projects/kajco-credit-trust-infrastructure'
+    | '/projects/kajco-regulatory-risk-foundations'
+    | '/projects/project-reporting-compliance'
+    | '/projects/workforce-retention-onboarding'
     | '/projects'
   id:
     | '__root__'
@@ -118,6 +190,12 @@ export interface FileRouteTypes {
     | '/projects'
     | '/case-studies/$slug'
     | '/projects/$slug'
+    | '/projects/business-strategy-growth-planning'
+    | '/projects/digital-workflow-transformation'
+    | '/projects/kajco-credit-trust-infrastructure'
+    | '/projects/kajco-regulatory-risk-foundations'
+    | '/projects/project-reporting-compliance'
+    | '/projects/workforce-retention-onboarding'
     | '/projects/'
   fileRoutesById: FileRoutesById
 }
@@ -188,16 +266,76 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof ProjectsRoute
     }
+    '/projects/business-strategy-growth-planning': {
+      id: '/projects/business-strategy-growth-planning'
+      path: '/business-strategy-growth-planning'
+      fullPath: '/projects/business-strategy-growth-planning'
+      preLoaderRoute: typeof ProjectsBusinessStrategyGrowthPlanningRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/digital-workflow-transformation': {
+      id: '/projects/digital-workflow-transformation'
+      path: '/digital-workflow-transformation'
+      fullPath: '/projects/digital-workflow-transformation'
+      preLoaderRoute: typeof ProjectsDigitalWorkflowTransformationRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/kajco-credit-trust-infrastructure': {
+      id: '/projects/kajco-credit-trust-infrastructure'
+      path: '/kajco-credit-trust-infrastructure'
+      fullPath: '/projects/kajco-credit-trust-infrastructure'
+      preLoaderRoute: typeof ProjectsKajcoCreditTrustInfrastructureRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/kajco-regulatory-risk-foundations': {
+      id: '/projects/kajco-regulatory-risk-foundations'
+      path: '/kajco-regulatory-risk-foundations'
+      fullPath: '/projects/kajco-regulatory-risk-foundations'
+      preLoaderRoute: typeof ProjectsKajcoRegulatoryRiskFoundationsRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/project-reporting-compliance': {
+      id: '/projects/project-reporting-compliance'
+      path: '/project-reporting-compliance'
+      fullPath: '/projects/project-reporting-compliance'
+      preLoaderRoute: typeof ProjectsProjectReportingComplianceRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/workforce-retention-onboarding': {
+      id: '/projects/workforce-retention-onboarding'
+      path: '/workforce-retention-onboarding'
+      fullPath: '/projects/workforce-retention-onboarding'
+      preLoaderRoute: typeof ProjectsWorkforceRetentionOnboardingRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
   }
 }
 
 interface ProjectsRouteChildren {
   ProjectsSlugRoute: typeof ProjectsSlugRoute
+  ProjectsBusinessStrategyGrowthPlanningRoute: typeof ProjectsBusinessStrategyGrowthPlanningRoute
+  ProjectsDigitalWorkflowTransformationRoute: typeof ProjectsDigitalWorkflowTransformationRoute
+  ProjectsKajcoCreditTrustInfrastructureRoute: typeof ProjectsKajcoCreditTrustInfrastructureRoute
+  ProjectsKajcoRegulatoryRiskFoundationsRoute: typeof ProjectsKajcoRegulatoryRiskFoundationsRoute
+  ProjectsProjectReportingComplianceRoute: typeof ProjectsProjectReportingComplianceRoute
+  ProjectsWorkforceRetentionOnboardingRoute: typeof ProjectsWorkforceRetentionOnboardingRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 const ProjectsRouteChildren: ProjectsRouteChildren = {
   ProjectsSlugRoute: ProjectsSlugRoute,
+  ProjectsBusinessStrategyGrowthPlanningRoute:
+    ProjectsBusinessStrategyGrowthPlanningRoute,
+  ProjectsDigitalWorkflowTransformationRoute:
+    ProjectsDigitalWorkflowTransformationRoute,
+  ProjectsKajcoCreditTrustInfrastructureRoute:
+    ProjectsKajcoCreditTrustInfrastructureRoute,
+  ProjectsKajcoRegulatoryRiskFoundationsRoute:
+    ProjectsKajcoRegulatoryRiskFoundationsRoute,
+  ProjectsProjectReportingComplianceRoute:
+    ProjectsProjectReportingComplianceRoute,
+  ProjectsWorkforceRetentionOnboardingRoute:
+    ProjectsWorkforceRetentionOnboardingRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }
 
