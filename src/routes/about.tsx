@@ -256,20 +256,6 @@ function About() {
             </div>
           </Reveal>
 
-          <Reveal delay={200}>
-            <div className="card-surface p-6">
-              <p className="mono-label">Certifications</p>
-              <ul className="mt-4 space-y-3">
-                {certifications.map((c) => (
-                  <li key={c} className="flex gap-3 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-
           {skillGroups.slice(0, 2).map((g, i) => (
             <Reveal key={g.name} delay={280 + i * 90}>
               <div className="card-surface p-6">
