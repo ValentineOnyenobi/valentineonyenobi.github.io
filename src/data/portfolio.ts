@@ -384,13 +384,14 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "The underlying challenge was operational friction. Manual and fragmented processes can create repetitive administrative work, slower information movement, unclear ownership, avoidable coordination effort, inconsistent execution and reduced visibility. The objective was therefore to improve the workflow itself, rather than simply asking people to work harder.",
     workedOn: [
-      "implementing digital workflows",
-      "improving administrative processes",
-      "coordinating operational activity",
-      "managing vendor relationships",
-      "supporting procurement",
-      "strengthening the connection between administration and project delivery",
+      "Implementing Digital Workflows",
+      "Improving Administrative Processes",
+      "Coordinating Operational Activity",
+      "Managing Vendor Relationships",
+      "Supporting Procurement",
+      "Strengthening the Connection Between Administration and Project Delivery",
     ],
+
     approach: [
       {
         title: "Digital Workflow Transformation",
