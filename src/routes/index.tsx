@@ -212,8 +212,20 @@ function Home() {
                   <p className="mono-label">In practice</p>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {s.practice}
+                    {"practiceLink" in s && s.practiceLink ? (
+                      <>
+                        {" "}
+                        <Link
+                          to={s.practiceLink}
+                          className="text-signal underline-offset-4 hover:underline"
+                        >
+                          →
+                        </Link>
+                      </>
+                    ) : null}
                   </p>
                 </div>
+
               </article>
             </Reveal>
           ))}

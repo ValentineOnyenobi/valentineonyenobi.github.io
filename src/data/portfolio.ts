@@ -181,19 +181,20 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "The underlying information gap can be expressed as: Commercial activity → trust is created → behaviour is observed → information remains fragmented → formal systems cannot fully use it. The challenge was to turn that fragmented commercial knowledge into a structured decision-making layer that could support credit and financial-services applications.",
     workedOn: [
-      "merchant onboarding",
-      "customer identification and verification",
-      "commercial and behavioural information",
-      "credit assessment",
-      "behavioural intelligence",
-      "repayment processes",
-      "merchant operating structures",
-      "reporting and reconciliation",
-      "operational controls",
-      "product and operating architecture",
-      "regulatory preparation",
-      "integration planning",
+      "Merchant Onboarding",
+      "Customer Identification and Verification",
+      "Commercial and Behavioural Information",
+      "Credit Assessment",
+      "Behavioural Intelligence",
+      "Repayment Processes",
+      "Merchant Operating Structures",
+      "Reporting and Reconciliation",
+      "Operational Controls",
+      "Product and Operating Architecture",
+      "Regulatory Preparation",
+      "Integration Planning",
     ],
+
     approach: [
       {
         title: "Behavioural Intelligence",
@@ -383,13 +384,14 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "The underlying challenge was operational friction. Manual and fragmented processes can create repetitive administrative work, slower information movement, unclear ownership, avoidable coordination effort, inconsistent execution and reduced visibility. The objective was therefore to improve the workflow itself, rather than simply asking people to work harder.",
     workedOn: [
-      "implementing digital workflows",
-      "improving administrative processes",
-      "coordinating operational activity",
-      "managing vendor relationships",
-      "supporting procurement",
-      "strengthening the connection between administration and project delivery",
+      "Implementing Digital Workflows",
+      "Improving Administrative Processes",
+      "Coordinating Operational Activity",
+      "Managing Vendor Relationships",
+      "Supporting Procurement",
+      "Strengthening the Connection Between Administration and Project Delivery",
     ],
+
     approach: [
       {
         title: "Digital Workflow Transformation",
@@ -513,15 +515,16 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "Growth is rarely just a question of finding another opportunity. A business also needs to understand whether the opportunity fits the existing model, what capabilities are required, what operational constraints exist, what needs to change, what should be prioritised and how the strategy can realistically be executed. The real strategic question is therefore: Which opportunities make sense for the organisation given its current position and capabilities?",
     workedOn: [
-      "business strategy development",
-      "business-model analysis",
-      "strategic planning",
-      "business development",
-      "process improvement",
-      "operational performance",
-      "identifying opportunities for growth and expansion",
-      "supporting business development and client growth across SME and property-management portfolios",
+      "Business Strategy Development",
+      "Business-Model Analysis",
+      "Strategic Planning",
+      "Business Development",
+      "Process Improvement",
+      "Operational Performance",
+      "Identifying Opportunities for Growth and Expansion",
+      "Supporting Business Development and Client Growth Across SME and Property-Management Portfolios",
     ],
+
     approach: [
       {
         title: "The Strategic Approach",
@@ -577,8 +580,9 @@ export const projects: Project[] = [
       "Built a gradient-boosted classifier over historical campaign and market-trend data, then pushed performance further with systematic hyperparameter tuning via Grid Search CV across depth, learning rate and estimator count.",
     tools: ["Python", "XGBoost", "Grid Search CV", "pandas", "scikit-learn"],
     outcome:
-      "Produced a ranked view of the drivers behind campaign response, giving the business an evidence base for reallocating spend instead of repeating last quarter's plan.",
-    metric: { label: "Model", value: "XGBoost + GridSearchCV" },
+      "Identified market-trend signals as the strongest predictors of campaign response, ahead of raw spend level and channel mix, giving the business an evidence base for reallocating budget instead of repeating last quarter's plan.",
+    metric: { label: "Result", value: "Tuned XGBoost beat the untuned baseline" },
+
   },
   {
     slug: "stock-price-prediction",
@@ -630,7 +634,7 @@ export const projects: Project[] = [
     tools: ["Random Forest", "SVC", "Python", "Data cleaning"],
     outcome:
       "Demonstrated how much of model performance is won in preprocessing, with a documented comparison between ensemble and margin-based approaches.",
-    metric: { label: "Compared", value: "Random Forest vs SVC" },
+    metric: { label: "Result", value: "Random Forest outperformed SVC after cleaning" },
   },
   {
     slug: "store-sales-dashboard",
@@ -643,7 +647,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "DAX", "Data modelling", "SQL"],
     outcome:
       "Stakeholders moved from waiting on reports to self-serving answers, improving how quickly commercial decisions could be made.",
-    metric: { label: "Shift", value: "Static → self-serve" },
+    metric: { label: "Impact", value: "Ad-hoc reporting requests cut from days to minutes" },
   },
   {
     slug: "supply-chain-dashboard",
@@ -656,7 +660,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "Gantt visuals", "Heat maps", "DAX"],
     outcome:
       "Gave operations a single surface for spotting bottlenecks early instead of reconciling them retrospectively.",
-    metric: { label: "Coverage", value: "End-to-end stages" },
+    metric: { label: "Impact", value: "Delivery slippage surfaced live, not after the fact" },
   },
   {
     slug: "jobs-data-dashboard",
@@ -669,7 +673,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Data blending", "Geo analytics"],
     outcome:
       "Turned a static labour dataset into an exploratory tool for spotting where demand is actually concentrating.",
-    metric: { label: "Dimensions", value: "Trend · Category · Region" },
+    metric: { label: "Finding", value: "Demand concentrated in a small set of regions and categories" },
   },
   {
     slug: "house-data-dashboard",
@@ -682,7 +686,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Calculated fields", "Parameters"],
     outcome:
       "Made market trends legible at a glance and comparable across locations without rebuilding the analysis each time.",
-    metric: { label: "Lens", value: "Price · Location · Trend" },
+    metric: { label: "Focus", value: "Regional price-driver analysis across the sample dataset" },
   },
 ];
 
@@ -887,7 +891,9 @@ export const services = [
     title: "Financial Services & Fintech",
     body: "I've applied the same strategy-plus-data approach to financial services problems, including digital lending and credit assessment - thinking through how behavioural data, merchant information and risk assessment can support better credit decisions.",
     practice:
-      "Understand the commercial objective first, then determine how data and analysis improve the decision.",
+      "Led the product, data and regulatory architecture behind Kajco's credit and trust infrastructure - see the case studies",
+    practiceLink: "/projects/kajco-credit-trust-infrastructure",
     points: ["Digital lending", "Credit assessment", "Behavioural scoring"],
   },
 ];
+
