@@ -193,9 +193,10 @@ function Contact() {
             <div className="card-surface p-6">
               <p className="mono-label">What I take on</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                I work with organisations, founders and teams on strategy, analytics, business
-                intelligence, operational improvement and data-driven decision-making.
+                I take on strategy &amp; consulting, data &amp; BI, ML, operations, and fintech
+                engagements - pick the closest match above.
               </p>
+
             </div>
           </Reveal>
         </div>
