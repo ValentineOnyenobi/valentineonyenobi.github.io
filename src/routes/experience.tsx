@@ -40,6 +40,12 @@ function Experience() {
           Consulting, project delivery and fintech across the UK, UAE and Nigeria - the operational
           grounding behind the analytics work.
         </p>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Several roles below overlap by design - Freetown Consultancy has run as an ongoing
+          engagement alongside full-time roles and, more recently, the Kajco founder role, since
+          2019.
+        </p>
+
       </Reveal>
 
       <div className="mt-16 grid gap-14 lg:grid-cols-[1.7fr_1fr]">
