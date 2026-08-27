@@ -80,11 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Valentine Onyenobi — Business & Data Analyst" },
+      { title: "Valentine Onyenobi - Business & Data Analyst" },
       {
         name: "description",
         content:
-          "Portfolio of Valentine Onyenobi — London-based Business & Data Analyst working across strategy, analytics, business intelligence and operations.",
+          "Portfolio of Valentine Onyenobi - London-based Business & Data Analyst working across strategy, analytics, business intelligence and operations.",
       },
       { name: "author", content: "Valentine Onyenobi" },
       { property: "og:site_name", content: "Valentine Onyenobi" },
@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

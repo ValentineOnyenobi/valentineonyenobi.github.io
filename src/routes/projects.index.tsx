@@ -18,13 +18,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Projects — Case Studies, Machine Learning, Power BI & Tableau | Valentine Onyenobi" },
+      { title: "Projects - Case Studies, Machine Learning, Power BI & Tableau | Valentine Onyenobi" },
       {
         name: "description",
         content:
           "Featured case studies across strategy, consulting, operations and financial services, plus nine technical projects: XGBoost models, Power BI and Tableau dashboards.",
       },
-      { property: "og:title", content: "Projects — Valentine Onyenobi" },
+      { property: "og:title", content: "Projects - Valentine Onyenobi" },
       {
         property: "og:description",
         content:

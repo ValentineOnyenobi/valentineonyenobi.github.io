@@ -17,7 +17,7 @@ export const Route = createFileRoute("/projects/$slug")({
       };
     }
     const { project } = loaderData;
-    const title = `${project.title} — Valentine Onyenobi`;
+    const title = `${project.title} - Valentine Onyenobi`;
     return {
       meta: [
         { title },

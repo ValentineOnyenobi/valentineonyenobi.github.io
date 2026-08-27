@@ -7,13 +7,13 @@ import { socialMeta } from "@/lib/og";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Valentine Onyenobi, Business & Data Analyst" },
+      { title: "About - Valentine Onyenobi, Business & Data Analyst" },
       {
         name: "description",
         content:
           "Business & Data Analyst, Founder and Consultant working across strategy, data analytics, business intelligence, operations and financial services.",
       },
-      { property: "og:title", content: "About — Valentine Onyenobi, Business & Data Analyst" },
+      { property: "og:title", content: "About - Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
         content:

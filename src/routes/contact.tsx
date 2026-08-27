@@ -9,13 +9,13 @@ import { socialMeta } from "@/lib/og";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Hire Valentine Onyenobi, Business & Data Analyst" },
+      { title: "Contact - Hire Valentine Onyenobi, Business & Data Analyst" },
       {
         name: "description",
         content:
           "Get in touch with Valentine Onyenobi for professional engagements in business strategy, data analysis, business intelligence, operations and process improvement, consulting and data-driven decision support.",
       },
-      { property: "og:title", content: "Contact — Valentine Onyenobi, Business & Data Analyst" },
+      { property: "og:title", content: "Contact - Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
         content: "Data analysis, BI dashboards and consulting. Let's talk about your data.",

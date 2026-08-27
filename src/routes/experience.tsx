@@ -6,7 +6,7 @@ import { socialMeta } from "@/lib/og";
 export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: [
-      { title: "Experience & Education — Valentine Onyenobi, Business & Data Analyst" },
+      { title: "Experience & Education - Valentine Onyenobi, Business & Data Analyst" },
       {
         name: "description",
         content:
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/experience")({
       },
       {
         property: "og:title",
-        content: "Experience & Education — Valentine Onyenobi, Business & Data Analyst",
+        content: "Experience & Education - Valentine Onyenobi, Business & Data Analyst",
       },
       {
         property: "og:description",

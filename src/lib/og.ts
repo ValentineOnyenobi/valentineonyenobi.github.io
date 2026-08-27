@@ -2,7 +2,7 @@
 export const SITE_URL = "https://valentineonyenobi.lovable.app";
 
 // Custom 1200x630 portfolio OG image hosted on the CDN (deep navy + teal branding).
-export const OG_IMAGE_URL = `${SITE_URL}/__l5e/assets-v1/f3cf04aa-0ce3-443f-b94c-8be5e7e8e169/og-image.png`;
+export const OG_IMAGE_URL = `${SITE_URL}/__l5e/assets-v1/019ec988-cbac-4f36-a5bf-53b2b6ffb10c/og-image.png`;
 
 /**
  * Per-route social tags: canonical og:url plus the custom preview image for
