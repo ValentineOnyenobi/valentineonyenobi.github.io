@@ -23,13 +23,13 @@ const previewProjects = ["marketing-analysis", "supply-chain-dashboard"].map(
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Valentine Onyenobi — Business & Data Analyst" },
+      { title: "Valentine Onyenobi - Business & Data Analyst" },
       {
         name: "description",
         content:
           "Business strategy, data analytics, business intelligence and operations. Valentine Onyenobi helps organisations understand performance and make better decisions across the UK, Nigeria and the UAE.",
       },
-      { property: "og:title", content: "Valentine Onyenobi — Business & Data Analyst" },
+      { property: "og:title", content: "Valentine Onyenobi - Business & Data Analyst" },
       {
         property: "og:description",
         content:

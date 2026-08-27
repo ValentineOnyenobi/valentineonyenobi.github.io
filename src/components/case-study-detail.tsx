@@ -21,7 +21,7 @@ export function caseStudyPage(slug: string) {
           meta: [{ title: "Case study not found" }, { name: "robots", content: "noindex" }],
         };
       }
-      const title = `${study.title} — Valentine Onyenobi`;
+      const title = `${study.title} - Valentine Onyenobi`;
       return {
         meta: [
           { title },
