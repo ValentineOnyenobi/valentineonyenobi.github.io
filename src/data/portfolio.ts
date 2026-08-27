@@ -181,19 +181,20 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "The underlying information gap can be expressed as: Commercial activity → trust is created → behaviour is observed → information remains fragmented → formal systems cannot fully use it. The challenge was to turn that fragmented commercial knowledge into a structured decision-making layer that could support credit and financial-services applications.",
     workedOn: [
-      "merchant onboarding",
-      "customer identification and verification",
-      "commercial and behavioural information",
-      "credit assessment",
-      "behavioural intelligence",
-      "repayment processes",
-      "merchant operating structures",
-      "reporting and reconciliation",
-      "operational controls",
-      "product and operating architecture",
-      "regulatory preparation",
-      "integration planning",
+      "Merchant Onboarding",
+      "Customer Identification and Verification",
+      "Commercial and Behavioural Information",
+      "Credit Assessment",
+      "Behavioural Intelligence",
+      "Repayment Processes",
+      "Merchant Operating Structures",
+      "Reporting and Reconciliation",
+      "Operational Controls",
+      "Product and Operating Architecture",
+      "Regulatory Preparation",
+      "Integration Planning",
     ],
+
     approach: [
       {
         title: "Behavioural Intelligence",
