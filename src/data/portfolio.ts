@@ -515,15 +515,16 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "Growth is rarely just a question of finding another opportunity. A business also needs to understand whether the opportunity fits the existing model, what capabilities are required, what operational constraints exist, what needs to change, what should be prioritised and how the strategy can realistically be executed. The real strategic question is therefore: Which opportunities make sense for the organisation given its current position and capabilities?",
     workedOn: [
-      "business strategy development",
-      "business-model analysis",
-      "strategic planning",
-      "business development",
-      "process improvement",
-      "operational performance",
-      "identifying opportunities for growth and expansion",
-      "supporting business development and client growth across SME and property-management portfolios",
+      "Business Strategy Development",
+      "Business-Model Analysis",
+      "Strategic Planning",
+      "Business Development",
+      "Process Improvement",
+      "Operational Performance",
+      "Identifying Opportunities for Growth and Expansion",
+      "Supporting Business Development and Client Growth Across SME and Property-Management Portfolios",
     ],
+
     approach: [
       {
         title: "The Strategic Approach",
