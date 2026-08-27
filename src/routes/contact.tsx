@@ -13,8 +13,9 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Valentine Onyenobi for professional engagements in business strategy, data analysis, business intelligence, operations and process improvement, consulting and data-driven decision support.",
+          "Get in touch with Valentine Onyenobi for Business & Data Analyst roles, BI dashboard builds or consulting engagements. Based in London, working globally.",
       },
+
       { property: "og:title", content: "Contact - Valentine Onyenobi, Business & Data Analyst" },
       {
         property: "og:description",
