@@ -1,4 +1,4 @@
-# Valentine Onyenobi — Professional Portfolio
+# Valentine Onyenobi - Professional Portfolio
 
 This repository contains the source code for my professional portfolio website.
 
