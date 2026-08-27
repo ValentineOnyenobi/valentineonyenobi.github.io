@@ -292,7 +292,7 @@ export const caseStudies: CaseStudy[] = [
       "Escalation",
     ],
     outcome:
-      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work, including regulatory preparation, data-governance structures, identity controls, auditability and operational risk controls. Kajco Lending Services Limited received FCCPC approval in connection with the Kajco Credit App. The venture remains at pre-commercial deployment, with controlled deployment, evidence generation and refinement representing the next stage.",
+      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work, including regulatory preparation, data-governance structures, identity controls, auditability and operational risk controls. Kajco Lending Services Limited received approval under the FCCPC Digital Lending Regulations in connection with the Kajco Credit App. The venture remains at pre-commercial deployment, with controlled deployment, evidence generation and refinement representing the next stage.",
     demonstrates: [
       "Regulatory strategy",
       "Risk management",
