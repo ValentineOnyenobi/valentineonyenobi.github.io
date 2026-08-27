@@ -887,7 +887,9 @@ export const services = [
     title: "Financial Services & Fintech",
     body: "I've applied the same strategy-plus-data approach to financial services problems, including digital lending and credit assessment - thinking through how behavioural data, merchant information and risk assessment can support better credit decisions.",
     practice:
-      "Understand the commercial objective first, then determine how data and analysis improve the decision.",
+      "Led the product, data and regulatory architecture behind Kajco's credit and trust infrastructure - see the case studies",
+    practiceLink: "/projects/kajco-credit-trust-infrastructure",
     points: ["Digital lending", "Credit assessment", "Behavioural scoring"],
   },
 ];
+
