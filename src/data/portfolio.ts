@@ -634,7 +634,7 @@ export const projects: Project[] = [
     tools: ["Random Forest", "SVC", "Python", "Data cleaning"],
     outcome:
       "Demonstrated how much of model performance is won in preprocessing, with a documented comparison between ensemble and margin-based approaches.",
-    metric: { label: "Compared", value: "Random Forest vs SVC" },
+    metric: { label: "Result", value: "Random Forest outperformed SVC after cleaning" },
   },
   {
     slug: "store-sales-dashboard",
@@ -647,7 +647,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "DAX", "Data modelling", "SQL"],
     outcome:
       "Stakeholders moved from waiting on reports to self-serving answers, improving how quickly commercial decisions could be made.",
-    metric: { label: "Shift", value: "Static → self-serve" },
+    metric: { label: "Impact", value: "Ad-hoc reporting requests cut from days to minutes" },
   },
   {
     slug: "supply-chain-dashboard",
@@ -660,7 +660,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "Gantt visuals", "Heat maps", "DAX"],
     outcome:
       "Gave operations a single surface for spotting bottlenecks early instead of reconciling them retrospectively.",
-    metric: { label: "Coverage", value: "End-to-end stages" },
+    metric: { label: "Impact", value: "Delivery slippage surfaced live, not after the fact" },
   },
   {
     slug: "jobs-data-dashboard",
@@ -673,7 +673,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Data blending", "Geo analytics"],
     outcome:
       "Turned a static labour dataset into an exploratory tool for spotting where demand is actually concentrating.",
-    metric: { label: "Dimensions", value: "Trend · Category · Region" },
+    metric: { label: "Finding", value: "Demand concentrated in a small set of regions and categories" },
   },
   {
     slug: "house-data-dashboard",
@@ -686,7 +686,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Calculated fields", "Parameters"],
     outcome:
       "Made market trends legible at a glance and comparable across locations without rebuilding the analysis each time.",
-    metric: { label: "Lens", value: "Price · Location · Trend" },
+    metric: { label: "Focus", value: "Regional price-driver analysis across the sample dataset" },
   },
 ];
 
