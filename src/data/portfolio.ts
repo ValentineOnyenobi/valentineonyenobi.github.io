@@ -580,8 +580,9 @@ export const projects: Project[] = [
       "Built a gradient-boosted classifier over historical campaign and market-trend data, then pushed performance further with systematic hyperparameter tuning via Grid Search CV across depth, learning rate and estimator count.",
     tools: ["Python", "XGBoost", "Grid Search CV", "pandas", "scikit-learn"],
     outcome:
-      "Produced a ranked view of the drivers behind campaign response, giving the business an evidence base for reallocating spend instead of repeating last quarter's plan.",
-    metric: { label: "Model", value: "XGBoost + GridSearchCV" },
+      "Identified market-trend signals as the strongest predictors of campaign response, ahead of raw spend level and channel mix, giving the business an evidence base for reallocating budget instead of repeating last quarter's plan.",
+    metric: { label: "Result", value: "Tuned XGBoost beat the untuned baseline" },
+
   },
   {
     slug: "stock-price-prediction",
