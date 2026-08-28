@@ -577,11 +577,11 @@ export const projects: Project[] = [
     problem:
       "Campaign spend was being allocated on intuition, with no reliable read on which market signals actually preceded conversion.",
     approach:
-      "Built a gradient-boosted classifier over historical campaign and market-trend data, then pushed performance further with systematic hyperparameter tuning via Grid Search CV across depth, learning rate and estimator count.",
-    tools: ["Python", "XGBoost", "Grid Search CV", "pandas", "scikit-learn"],
+      "Built a Decision Tree classifier over historical campaign and market-trend data, then tuned it with Grid Search CV across depth, splitter and criterion parameters to improve responder recall.",
+    tools: ["Python", "Decision Tree", "Grid Search CV", "pandas", "scikit-learn"],
     outcome:
       "Identified market-trend signals as the strongest predictors of campaign response, ahead of raw spend level and channel mix, giving the business an evidence base for reallocating budget instead of repeating last quarter's plan.",
-    metric: { label: "Result", value: "Tuned XGBoost beat the untuned baseline" },
+    metric: { label: "Result", value: "Result: Tuning improved responder recall from 28% to 47%, trading off precision — a deliberate shift toward catching more likely responders" },
 
   },
   {
@@ -634,7 +634,7 @@ export const projects: Project[] = [
     tools: ["Random Forest", "SVC", "Python", "Data cleaning"],
     outcome:
       "Demonstrated how much of model performance is won in preprocessing, with a documented comparison between ensemble and margin-based approaches.",
-    metric: { label: "Result", value: "Random Forest outperformed SVC after cleaning" },
+    metric: { label: "Result", value: "Result: Random Forest (cross-validated) — 91.4% accuracy, ahead of tuned SVC at 89.7%" },
   },
   {
     slug: "store-sales-dashboard",
@@ -647,7 +647,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "DAX", "Data modelling", "SQL"],
     outcome:
       "Stakeholders moved from waiting on reports to self-serving answers, improving how quickly commercial decisions could be made.",
-    metric: { label: "Impact", value: "Ad-hoc reporting requests cut from days to minutes" },
+    metric: { label: "Result", value: "Result: Revenue MTD $320.45K, with year-to-date revenue growing from ~$200K in January to over $2.2M by December 2020" },
   },
   {
     slug: "supply-chain-dashboard",
@@ -660,7 +660,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "Gantt visuals", "Heat maps", "DAX"],
     outcome:
       "Gave operations a single surface for spotting bottlenecks early instead of reconciling them retrospectively.",
-    metric: { label: "Impact", value: "Delivery slippage surfaced live, not after the fact" },
+    metric: { label: "Result", value: "Result: $2.6M total revenue at an 11.09% margin, led by New York City and Phones as the top-performing city and subcategory" },
   },
   {
     slug: "jobs-data-dashboard",
@@ -673,7 +673,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Data blending", "Geo analytics"],
     outcome:
       "Turned a static labour dataset into an exploratory tool for spotting where demand is actually concentrating.",
-    metric: { label: "Finding", value: "Demand concentrated in a small set of regions and categories" },
+    metric: { label: "Finding", value: "Finding: US-based roles make up 55% of records and average $149,194 — well above the $112,298 dataset-wide average" },
   },
   {
     slug: "house-data-dashboard",
@@ -686,7 +686,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Calculated fields", "Parameters"],
     outcome:
       "Made market trends legible at a glance and comparable across locations without rebuilding the analysis each time.",
-    metric: { label: "Focus", value: "Regional price-driver analysis across the sample dataset" },
+    metric: { label: "Finding", value: "Finding: Median price $445K against a $1.495M ceiling reflects a right-skewed market; 3-bedroom homes make up 46% of listings, the dominant segment" },
   },
 ];
 
