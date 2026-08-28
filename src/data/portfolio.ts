@@ -217,7 +217,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     outcome:
-      "Kajco is real, implemented work - not a concept. The product architecture, Trustline structure, technology integrations and regulatory foundations have been built, independently scrutinised and are fully in place. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations. Specialist experts were engaged throughout to stress-test the model rather than take it on faith. Rather than building lending, identity verification and payment infrastructure from scratch, Kajco integrates established specialist providers across those functions, while developing its own application, data and intelligence layers. The platform is built and licensed - publishing the app and opening operations is the remaining step to go live. What's ahead is funding, continued refinement and real-world validation. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
+      "Kajco is real, implemented work - not a concept. The product architecture, Trustline structure, technology integrations and regulatory foundations have been built, independently scrutinised and are fully in place. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations, alongside the additional regulatory and data-protection requirements this space demands. Specialist experts were engaged throughout to stress-test the model rather than take it on faith. Rather than building lending, identity verification and payment infrastructure from scratch, Kajco integrates established specialist providers across those functions, while developing its own application, data and intelligence layers. The platform is built and licensed - publishing the app and opening operations is the remaining step to go live. What's ahead is funding, continued refinement and real-world validation. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
     demonstrates: [
       "Strategic product development",
       "Data strategy",
@@ -292,7 +292,7 @@ export const caseStudies: CaseStudy[] = [
       "Escalation",
     ],
     outcome:
-      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work - built, reviewed and licensed rather than left as a design exercise. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations. The platform is ready to operate; funding, continued refinement and real-world validation are the remaining stage. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
+      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work - built, reviewed and licensed rather than left as a design exercise. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations, alongside the additional regulatory and data-protection requirements this space demands. The platform is ready to operate; funding, continued refinement and real-world validation are the remaining stage. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
     demonstrates: [
       "Regulatory strategy",
       "Risk management",
