@@ -250,7 +250,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     executiveSummary:
       "Building a digital lending platform requires more than a functioning product. Regulatory, privacy, identity, consumer-protection, risk and operational requirements all influence how the platform can operate. For Kajco, these considerations were developed alongside the product and operating model rather than treated as a separate compliance exercise.",
-    status: "Pre-commercial deployment",
+    status: "Built & Licensed - Deployment-Ready",
     problem:
       "The challenge was to establish an operating foundation in which Product → Data → Risk → Governance → Operations could work together. That meant considering not only what the product should do, but how information should be handled, participants verified, activities traced and operational risks controlled.",
     workedOn: [
