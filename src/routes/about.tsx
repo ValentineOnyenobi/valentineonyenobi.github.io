@@ -143,7 +143,7 @@ function About() {
                   My work as a founder has strengthened that perspective further.
                 </p>
                 <p className="leading-relaxed">
-                  With Kajco Finance, I have been developing inclusive digital lending and credit
+                  With Kajco Finance, I have built inclusive digital lending and credit
                   infrastructure, including a retailer credit system built around merchant
                   onboarding, behavioural scoring and credit assessment.
                 </p>
