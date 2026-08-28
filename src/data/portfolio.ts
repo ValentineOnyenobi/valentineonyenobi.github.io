@@ -177,7 +177,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     executiveSummary:
       "Kajco was established around a problem in emerging-market commerce: valuable information about trust and reliability is created through everyday merchant and customer relationships, but much of that information remains fragmented and difficult for formal financial systems to use.",
-    status: "Pre-commercial deployment",
+    status: "Built & Licensed - Deployment-Ready",
     problem:
       "The underlying information gap can be expressed as: Commercial activity → trust is created → behaviour is observed → information remains fragmented → formal systems cannot fully use it. The challenge was to turn that fragmented commercial knowledge into a structured decision-making layer that could support credit and financial-services applications.",
     workedOn: [
@@ -217,7 +217,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     outcome:
-      "Kajco has moved beyond the conceptual stage. The product architecture, Trustline structure, technology integrations, regulatory foundations and operating framework have been developed. Rather than building lending, identity verification and payment infrastructure from scratch, Kajco integrates established specialist providers across those functions, while developing its own application, data and intelligence layers. The venture is currently at pre-commercial deployment. The next major proof point is controlled live deployment, generation of real-world evidence and continued refinement of the model.",
+      "Kajco is real, implemented work - not a concept. The product architecture, Trustline structure, technology integrations and regulatory foundations have been built, independently scrutinised and are fully in place. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations. Specialist experts were engaged throughout to stress-test the model rather than take it on faith. Rather than building lending, identity verification and payment infrastructure from scratch, Kajco integrates established specialist providers across those functions, while developing its own application, data and intelligence layers. The platform is built and licensed - publishing the app and opening operations is the remaining step to go live. What's ahead is funding, continued refinement and real-world validation. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
     demonstrates: [
       "Strategic product development",
       "Data strategy",
@@ -292,7 +292,7 @@ export const caseStudies: CaseStudy[] = [
       "Escalation",
     ],
     outcome:
-      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work, including regulatory preparation, data-governance structures, identity controls, auditability and operational risk controls. Kajco Lending Services Limited received approval under the FCCPC Digital Lending Regulations in connection with the Kajco Credit App. The venture remains at pre-commercial deployment, with controlled deployment, evidence generation and refinement representing the next stage.",
+      "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work - built, reviewed and licensed rather than left as a design exercise. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations. The platform is ready to operate; funding, continued refinement and real-world validation are the remaining stage. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
     demonstrates: [
       "Regulatory strategy",
       "Risk management",
@@ -581,7 +581,7 @@ export const projects: Project[] = [
     tools: ["Python", "Decision Tree", "Grid Search CV", "pandas", "scikit-learn"],
     outcome:
       "Identified market-trend signals as the strongest predictors of campaign response, ahead of raw spend level and channel mix, giving the business an evidence base for reallocating budget instead of repeating last quarter's plan.",
-    metric: { label: "Result", value: "Result: Tuning improved responder recall from 28% to 47%, trading off precision - a deliberate shift toward catching more likely responders" },
+    metric: { label: "Result", value: "Tuning improved responder recall from 28% to 47%, trading off precision - a deliberate shift toward catching more likely responders" },
 
   },
   {
@@ -634,7 +634,7 @@ export const projects: Project[] = [
     tools: ["Random Forest", "SVC", "Python", "Data cleaning"],
     outcome:
       "Demonstrated how much of model performance is won in preprocessing, with a documented comparison between ensemble and margin-based approaches.",
-    metric: { label: "Result", value: "Result: Random Forest (cross-validated) - 91.4% accuracy, ahead of tuned SVC at 89.7%" },
+    metric: { label: "Result", value: "Random Forest (cross-validated) - 91.4% accuracy, ahead of tuned SVC at 89.7%" },
   },
   {
     slug: "store-sales-dashboard",
@@ -647,7 +647,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "DAX", "Data modelling", "SQL"],
     outcome:
       "Stakeholders moved from waiting on reports to self-serving answers, improving how quickly commercial decisions could be made.",
-    metric: { label: "Result", value: "Result: Revenue MTD $320.45K, with year-to-date revenue growing from ~$200K in January to over $2.2M by December 2020" },
+    metric: { label: "Result", value: "Revenue MTD $320.45K, with year-to-date revenue growing from ~$200K in January to over $2.2M by December 2020" },
   },
   {
     slug: "supply-chain-dashboard",
@@ -660,7 +660,7 @@ export const projects: Project[] = [
     tools: ["Power BI", "Gantt visuals", "Heat maps", "DAX"],
     outcome:
       "Gave operations a single surface for spotting bottlenecks early instead of reconciling them retrospectively.",
-    metric: { label: "Result", value: "Result: $2.6M total revenue at an 11.09% margin, led by New York City and Phones as the top-performing city and subcategory" },
+    metric: { label: "Result", value: "$2.6M total revenue at an 11.09% margin, led by New York City and Phones as the top-performing city and subcategory" },
   },
   {
     slug: "jobs-data-dashboard",
@@ -673,7 +673,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Data blending", "Geo analytics"],
     outcome:
       "Turned a static labour dataset into an exploratory tool for spotting where demand is actually concentrating.",
-    metric: { label: "Finding", value: "Finding: US-based roles make up 55% of records and average $149,194 - well above the $112,298 dataset-wide average" },
+    metric: { label: "Finding", value: "US-based roles make up 55% of records and average $149,194 - well above the $112,298 dataset-wide average" },
   },
   {
     slug: "house-data-dashboard",
@@ -686,7 +686,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Calculated fields", "Parameters"],
     outcome:
       "Made market trends legible at a glance and comparable across locations without rebuilding the analysis each time.",
-    metric: { label: "Finding", value: "Finding: Median price $445K against a $1.495M ceiling reflects a right-skewed market; 3-bedroom homes make up 46% of listings, the dominant segment" },
+    metric: { label: "Finding", value: "Median price $445K against a $1.495M ceiling reflects a right-skewed market; 3-bedroom homes make up 46% of listings, the dominant segment" },
   },
 ];
 
@@ -750,9 +750,9 @@ export const experience = [
     period: "MAR 2025 - PRESENT",
     current: true,
     bullets: [
-      "Founding Kajco Finance Ltd to develop inclusive digital lending and credit infrastructure for emerging markets.",
+      "Founded Kajco Finance Ltd and built inclusive digital lending and credit infrastructure for emerging markets, independently reviewed by specialist experts.",
       "Designing the Kajco Retailer Credit System, integrating behavioural scoring and merchant onboarding to strengthen credit assessment.",
-      "Leading regulatory planning and cross-functional execution to support the Kajco.io platform and lending operations.",
+      "Secured approval under the FCCPC Digital Lending Regulations and led the cross-functional execution behind the Kajco.io platform, now built and ready for deployment.",
     ],
   },
   {
@@ -891,7 +891,7 @@ export const services = [
     title: "Financial Services & Fintech",
     body: "I've applied the same strategy-plus-data approach to financial services problems, including digital lending and credit assessment - thinking through how behavioural data, merchant information and risk assessment can support better credit decisions.",
     practice:
-      "Led the product, data and regulatory architecture behind Kajco's credit and trust infrastructure - see the case studies",
+      "Built and licensed Kajco's credit and trust infrastructure - approved under the FCCPC Digital Lending Regulations and ready for deployment. See the case studies",
     practiceLink: "/projects/kajco-credit-trust-infrastructure",
     points: ["Digital lending", "Credit assessment", "Behavioural scoring"],
   },
