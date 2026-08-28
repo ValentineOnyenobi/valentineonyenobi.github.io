@@ -577,11 +577,11 @@ export const projects: Project[] = [
     problem:
       "Campaign spend was being allocated on intuition, with no reliable read on which market signals actually preceded conversion.",
     approach:
-      "Built a gradient-boosted classifier over historical campaign and market-trend data, then pushed performance further with systematic hyperparameter tuning via Grid Search CV across depth, learning rate and estimator count.",
-    tools: ["Python", "XGBoost", "Grid Search CV", "pandas", "scikit-learn"],
+      "Built a Decision Tree classifier over historical campaign and market-trend data, then tuned it with Grid Search CV across depth, splitter and criterion parameters to improve responder recall.",
+    tools: ["Python", "Decision Tree", "Grid Search CV", "pandas", "scikit-learn"],
     outcome:
       "Identified market-trend signals as the strongest predictors of campaign response, ahead of raw spend level and channel mix, giving the business an evidence base for reallocating budget instead of repeating last quarter's plan.",
-    metric: { label: "Result", value: "Tuned XGBoost beat the untuned baseline" },
+    metric: { label: "Result", value: "Result: Tuning improved responder recall from 28% to 47%, trading off precision — a deliberate shift toward catching more likely responders" },
 
   },
   {
