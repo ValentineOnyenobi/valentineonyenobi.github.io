@@ -39,7 +39,7 @@ export const Route = createFileRoute("/projects/")({
 });
 
 function ProjectsIndex() {
-  // Fully independent filter states — one per collection.
+  // Fully independent filter states - one per collection.
   const [featuredFilter, setFeaturedFilter] = useState<FeaturedFilter>("All");
   const [technicalFilter, setTechnicalFilter] = useState<TechnicalFilter>("All");
 
@@ -50,7 +50,7 @@ function ProjectsIndex() {
     (p) => technicalFilter === "All" || p.category === technicalFilter,
   );
 
-  // Counts are per-collection only — never against the combined portfolio.
+  // Counts are per-collection only - never against the combined portfolio.
   const featuredCount = (f: FeaturedFilter) =>
     f === "All"
       ? caseStudies.length
@@ -82,7 +82,7 @@ function ProjectsIndex() {
         </div>
       </Reveal>
 
-      {/* SECTION 1 — Featured Case Studies */}
+      {/* SECTION 1 - Featured Case Studies */}
       <section className="mt-20" aria-labelledby="featured-case-studies">
         <Reveal>
           <div className="flex items-center gap-4">
@@ -131,7 +131,7 @@ function ProjectsIndex() {
         )}
       </section>
 
-      {/* SECTION 2 — Technical Projects */}
+      {/* SECTION 2 - Technical Projects */}
       <section className="mt-24" aria-labelledby="technical-projects">
         <Reveal>
           <p className="mono-label">Hands-on</p>

@@ -367,7 +367,7 @@ function Home() {
             </div>
           </Reveal>
 
-          {/* Featured case study — high emphasis */}
+          {/* Featured case study - high emphasis */}
           <Reveal delay={80}>
             <Link
               to="/projects/$slug"
