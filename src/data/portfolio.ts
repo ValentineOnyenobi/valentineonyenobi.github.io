@@ -841,13 +841,13 @@ export const education = [
   {
     qualification: "MBA in Global Business",
     school: "Coventry University London",
-    period: "May 2023 – Sep 2024",
+    period: "May 2023 - Sep 2024",
   },
-  { qualification: "BSc Microbiology", school: "Imo State University", period: "Sep 2014 – Aug 2018" },
+  { qualification: "BSc Microbiology", school: "Imo State University", period: "Sep 2014 - Aug 2018" },
   {
     qualification: "National Diploma, Computer Science",
     school: "The Polytechnic Ibadan",
-    period: "Aug 2011 – Sep 2013",
+    period: "Aug 2011 - Sep 2013",
   },
 ];
 

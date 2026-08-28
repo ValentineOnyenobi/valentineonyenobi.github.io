@@ -202,7 +202,7 @@ export function LiveDashboard() {
             htmlFor="range-end"
             className="mono-label block"
           >
-            Period · {MONTHS[range[0]]}–{MONTHS[range[1]]}
+            Period · {MONTHS[range[0]]}-{MONTHS[range[1]]}
           </label>
           <div className="mt-2.5 flex items-center gap-2">
             <input
