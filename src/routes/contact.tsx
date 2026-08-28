@@ -50,7 +50,7 @@ function Contact() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    const body = `Project type: ${type}\n\n${message}\n\n— ${name} (${email})`;
+    const body = `Project type: ${type}\n\n${message}\n\n- ${name} (${email})`;
     window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
       `${type} enquiry from ${name}`,
     )}&body=${encodeURIComponent(body)}`;
@@ -142,7 +142,7 @@ function Contact() {
 
             {sent && (
               <p className="mt-4 font-mono text-[11px] text-signal">
-                Message prepared — if your email client didn&apos;t open, write to {profile.email}.
+                Message prepared - if your email client didn&apos;t open, write to {profile.email}.
               </p>
             )}
           </form>

@@ -109,7 +109,7 @@ export type Project = {
   metric: { label: string; value: string };
 };
 
-// Featured Case Studies filters — fully independent from the technical filters.
+// Featured Case Studies filters - fully independent from the technical filters.
 export const featuredFilters = [
   "All",
   "Strategy & Consulting",
@@ -124,7 +124,7 @@ export type FeaturedFilter = (typeof featuredFilters)[number];
 
 export type CaseStudyCategory = Exclude<FeaturedFilter, "All">;
 
-// Technical Projects filters — fully independent from the featured filters.
+// Technical Projects filters - fully independent from the featured filters.
 export const technicalFilters = ["All", "Machine Learning", "Power BI", "Tableau"] as const;
 
 export type TechnicalFilter = (typeof technicalFilters)[number];
@@ -308,7 +308,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "workforce-retention-onboarding",
     title: "Workforce Performance, Retention & Onboarding Improvement",
-    organisation: "Confidential SME Client — Nigeria",
+    organisation: "Confidential SME Client - Nigeria",
     categories: ["Strategy & Consulting", "Operations", "Workforce"],
     displayCategories: ["Strategy & Consulting", "Operations", "Workforce"],
     context:
@@ -325,7 +325,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     executiveSummary:
       "The engagement involved an SME where workforce performance, retention and operational consistency were important to the organisation's ability to deliver effectively. The challenge was not simply recruitment. It was creating stronger processes around people so employees could enter the organisation effectively, understand expectations and develop within a more structured operating environment.",
-    confidentiality: "Confidential SME Client — Nigeria",
+    confidentiality: "Confidential SME Client - Nigeria",
     problem:
       "The organisation needed a more consistent approach to: Onboarding → Training → Role clarity → Performance → Retention. The challenge was to strengthen these connections without introducing unnecessary complexity into an SME operating environment.",
     workedOn: [
@@ -363,7 +363,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "digital-workflow-transformation",
     title: "Transforming an Administrative Operation Through Digital Workflows",
-    organisation: "Confidential Organisation — UAE",
+    organisation: "Confidential Organisation - UAE",
     categories: ["Operations", "Strategy & Consulting"],
     displayCategories: ["Operations", "Process Improvement", "Digital Transformation"],
     context:
@@ -380,7 +380,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     executiveSummary:
       "The organisation operated within an administrative environment where effective coordination, information handling, procurement and project support were essential to day-to-day delivery. The opportunity was to improve how work moved through the operation by introducing more effective digital workflows and strengthening supporting processes.",
-    confidentiality: "Confidential Organisation — UAE",
+    confidentiality: "Confidential Organisation - UAE",
     problem:
       "The underlying challenge was operational friction. Manual and fragmented processes can create repetitive administrative work, slower information movement, unclear ownership, avoidable coordination effort, inconsistent execution and reduced visibility. The objective was therefore to improve the workflow itself, rather than simply asking people to work harder.",
     workedOn: [
@@ -437,7 +437,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "project-reporting-compliance",
     title: "Improving Project Visibility Through Operational Reporting",
-    organisation: "Confidential Project Management Engagement — UAE",
+    organisation: "Confidential Project Management Engagement - UAE",
     categories: ["Project Delivery", "Operations"],
     displayCategories: ["Project Delivery", "Operations", "Compliance", "Stakeholder Management"],
     context:
@@ -453,7 +453,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     executiveSummary:
       "Project delivery creates a large volume of information across schedules, resources, stakeholders, activities and compliance requirements. My role involved managing project schedules, resources and stakeholder communications and introducing operational reporting to improve project tracking and compliance.",
-    confidentiality: "Confidential Project Management Engagement — UAE",
+    confidentiality: "Confidential Project Management Engagement - UAE",
     problem:
       "Project information can become fragmented across Plans, Activities, People, Stakeholders, Issues and Compliance requirements. When this happens, teams may have information without having useful visibility. The practical question becomes: Can stakeholders quickly understand where the project stands, what requires attention and whether delivery remains on track?",
     workedOn: [
@@ -470,7 +470,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         title: "Management Insight",
-        body: "Reporting is only useful when it changes what someone does next — not when it simply documents what already happened.",
+        body: "Reporting is only useful when it changes what someone does next - not when it simply documents what already happened.",
       },
     ],
     processFlow: {
@@ -490,12 +490,12 @@ export const caseStudies: CaseStudy[] = [
     ],
     role: "I managed project schedules, resources and stakeholder communications, introduced operational reporting and supported workforce coordination through proactive planning and communication.",
     reflection:
-      "Reporting is only useful when it changes what someone does next — not when it simply documents what already happened.",
+      "Reporting is only useful when it changes what someone does next - not when it simply documents what already happened.",
   },
   {
     slug: "business-strategy-growth-planning",
     title: "Business Strategy, Business Model Analysis & Growth Planning",
-    organisation: "Confidential SME / Property Management Client — Nigeria",
+    organisation: "Confidential SME / Property Management Client - Nigeria",
     categories: ["Strategy & Consulting"],
     displayCategories: ["Strategy & Consulting", "Business Analysis", "Growth"],
     context:
@@ -511,7 +511,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     executiveSummary:
       "My strategy and consulting work has involved helping organisations understand their current position, improve how they operate and identify opportunities for growth. This has included work across SME and property-management environments, where business development, operating performance and strategic planning often need to be considered together.",
-    confidentiality: "Confidential SME / Property Management Client — Nigeria",
+    confidentiality: "Confidential SME / Property Management Client - Nigeria",
     problem:
       "Growth is rarely just a question of finding another opportunity. A business also needs to understand whether the opportunity fits the existing model, what capabilities are required, what operational constraints exist, what needs to change, what should be prioritised and how the strategy can realistically be executed. The real strategic question is therefore: Which opportunities make sense for the organisation given its current position and capabilities?",
     workedOn: [
@@ -581,7 +581,7 @@ export const projects: Project[] = [
     tools: ["Python", "Decision Tree", "Grid Search CV", "pandas", "scikit-learn"],
     outcome:
       "Identified market-trend signals as the strongest predictors of campaign response, ahead of raw spend level and channel mix, giving the business an evidence base for reallocating budget instead of repeating last quarter's plan.",
-    metric: { label: "Result", value: "Result: Tuning improved responder recall from 28% to 47%, trading off precision — a deliberate shift toward catching more likely responders" },
+    metric: { label: "Result", value: "Result: Tuning improved responder recall from 28% to 47%, trading off precision - a deliberate shift toward catching more likely responders" },
 
   },
   {
@@ -630,11 +630,11 @@ export const projects: Project[] = [
     problem:
       "Raw quality data was riddled with missing values and outliers that quietly wrecked naive models.",
     approach:
-      "Ran a full preprocessing pass — missing-value imputation, outlier treatment, scaling — then benchmarked Random Forest against a Support Vector Classifier to see which handled the cleaned feature space better.",
+      "Ran a full preprocessing pass - missing-value imputation, outlier treatment, scaling - then benchmarked Random Forest against a Support Vector Classifier to see which handled the cleaned feature space better.",
     tools: ["Random Forest", "SVC", "Python", "Data cleaning"],
     outcome:
       "Demonstrated how much of model performance is won in preprocessing, with a documented comparison between ensemble and margin-based approaches.",
-    metric: { label: "Result", value: "Result: Random Forest (cross-validated) — 91.4% accuracy, ahead of tuned SVC at 89.7%" },
+    metric: { label: "Result", value: "Result: Random Forest (cross-validated) - 91.4% accuracy, ahead of tuned SVC at 89.7%" },
   },
   {
     slug: "store-sales-dashboard",
@@ -673,7 +673,7 @@ export const projects: Project[] = [
     tools: ["Tableau", "Data blending", "Geo analytics"],
     outcome:
       "Turned a static labour dataset into an exploratory tool for spotting where demand is actually concentrating.",
-    metric: { label: "Finding", value: "Finding: US-based roles make up 55% of records and average $149,194 — well above the $112,298 dataset-wide average" },
+    metric: { label: "Finding", value: "Finding: US-based roles make up 55% of records and average $149,194 - well above the $112,298 dataset-wide average" },
   },
   {
     slug: "house-data-dashboard",

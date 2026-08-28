@@ -104,7 +104,7 @@ function ProjectDetail() {
           <Reveal key={s.label} delay={i * 80}>
             <section>
               <p className="mono-label">
-                {String(i + 1).padStart(2, "0")} — {s.label}
+                {String(i + 1).padStart(2, "0")} - {s.label}
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{s.body}</p>
             </section>
