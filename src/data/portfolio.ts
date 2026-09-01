@@ -219,14 +219,14 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       "Kajco is real, implemented work - not a concept. The product architecture, Trustline structure, technology integrations and regulatory foundations have been built, independently scrutinised and are fully in place. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations, alongside the additional regulatory and data-protection requirements this space demands. Specialist experts were engaged throughout to stress-test the model rather than take it on faith. Rather than building lending, identity verification and payment infrastructure from scratch, Kajco integrates established specialist providers across those functions, while developing its own application, data and intelligence layers. The platform is built and licensed - publishing the app and opening operations is the remaining step to go live. What's ahead is funding, continued refinement and real-world validation. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
     demonstrates: [
-      "Strategic product development",
-      "Data strategy",
-      "Credit decisioning",
-      "Behavioural intelligence",
-      "Financial-services thinking",
-      "Systems architecture",
-      "Venture building",
-      "Cross-functional execution",
+      "Strategic Product Development",
+      "Data Strategy",
+      "Credit Decisioning",
+      "Behavioural Intelligence",
+      "Financial-Services Thinking",
+      "Systems Architecture",
+      "Venture Building",
+      "Cross-Functional Execution",
     ],
     role: "I have been responsible for shaping the business model, product direction, data and intelligence approach, operating structure and cross-functional development required to move Kajco from problem definition through product and deployment preparation.",
   },
@@ -294,14 +294,14 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       "Kajco has established a substantial regulatory, governance and operational foundation alongside its product development work - built, reviewed and licensed rather than left as a design exercise. Kajco Lending Services Limited holds approval under the FCCPC Digital Lending Regulations, alongside the additional regulatory and data-protection requirements this space demands. The platform is ready to operate; funding, continued refinement and real-world validation are the remaining stage. I'm open to conversations with investors, partners and collaborators who want to be part of that next stage.",
     demonstrates: [
-      "Regulatory strategy",
-      "Risk management",
+      "Regulatory Strategy",
+      "Risk Management",
       "Governance",
-      "Data protection",
-      "Financial services",
-      "Product thinking",
-      "Operational controls",
-      "Stakeholder coordination",
+      "Data Protection",
+      "Financial Services",
+      "Product Thinking",
+      "Operational Controls",
+      "Stakeholder Coordination",
     ],
     role: "I led the integration of regulatory, governance, risk and operational considerations into the wider Kajco product and business architecture, working across strategic, product and execution requirements.",
   },
@@ -348,14 +348,14 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       "The engagement established a more structured approach to workforce onboarding, training and operational support, connecting people processes more directly to organisational performance. Client-specific performance metrics are not disclosed because they are not available in the underlying professional record.",
     demonstrates: [
-      "Workforce strategy",
+      "Workforce Strategy",
       "Consulting",
-      "Process improvement",
-      "Onboarding design",
+      "Process Improvement",
+      "Onboarding Design",
       "Training",
       "Retention",
-      "Operational performance",
-      "Stakeholder management",
+      "Operational Performance",
+      "Stakeholder Management",
     ],
     role: "I led operational improvement initiatives and worked on workforce performance, retention, onboarding and training programmes as part of the consulting engagement.",
     reflection: "People performance is influenced by the environment in which people work.",
@@ -421,13 +421,13 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       "The documented results included approximately 25% increase in office productivity following digital workflow implementation, and approximately 15% reduction in operating costs through vendor and procurement management.",
     demonstrates: [
-      "Process improvement",
-      "Workflow redesign",
-      "Digital transformation",
-      "Operational efficiency",
+      "Process Improvement",
+      "Workflow Redesign",
+      "Digital Transformation",
+      "Operational Efficiency",
       "Procurement",
-      "Vendor management",
-      "Cost control",
+      "Vendor Management",
+      "Cost Control",
       "Implementation",
     ],
     role: "I coordinated administrative operations, implemented digital workflows, managed vendor contracts and procurement, and supported project delivery and compliance.",
@@ -480,13 +480,13 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       "The reporting approach improved project tracking and compliance visibility and provided a more structured basis for stakeholder communication and delivery coordination. Project-specific commercial or delivery metrics are not disclosed because they are not supported by the available professional record.",
     demonstrates: [
-      "Project management",
-      "Operational reporting",
-      "Compliance tracking",
-      "Stakeholder management",
-      "Resource coordination",
-      "Delivery planning",
-      "Performance visibility",
+      "Project Management",
+      "Operational Reporting",
+      "Compliance Tracking",
+      "Stakeholder Management",
+      "Resource Coordination",
+      "Delivery Planning",
+      "Performance Visibility",
     ],
     role: "I managed project schedules, resources and stakeholder communications, introduced operational reporting and supported workforce coordination through proactive planning and communication.",
     reflection:
@@ -553,13 +553,13 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       "The work supported strategic planning, business development, process improvement and the identification of growth opportunities across the organisations and portfolios involved. Specific client-level growth or revenue figures are not presented because they are not documented in the available professional record.",
     demonstrates: [
-      "Business strategy",
-      "Business-model analysis",
-      "Growth planning",
-      "Business development",
+      "Business Strategy",
+      "Business-Model Analysis",
+      "Growth Planning",
+      "Business Development",
       "Consulting",
-      "Opportunity assessment",
-      "Strategic decision support",
+      "Opportunity Assessment",
+      "Strategic Decision Support",
     ],
     role: "I have worked across business strategy, business development, operations and analytical business-model analysis, combining commercial context with structured analysis to support strategic decisions.",
     reflection:
@@ -864,28 +864,28 @@ export const services = [
     body: "I evaluate where a business stands, identify opportunities and problems, and build practical strategies for growth and improvement - from business model analysis and market opportunity assessment to operational strategy and performance management.",
     practice:
       "Developed growth and operational strategies across SME and property-management environments, including workforce retention, onboarding and training initiatives.",
-    points: ["Business model analysis", "Market opportunity assessment", "Performance management"],
+    points: ["Business Model Analysis", "Market Opportunity Assessment", "Performance Management"],
   },
   {
     title: "Data Analytics & Business Intelligence",
     body: "I turn raw, messy data into evidence and decisions - cleaning, structuring and analysing datasets in SQL and Python, then building the dashboards that make the findings usable.",
     practice:
       "Built interactive Power BI dashboards (including a supply-chain dashboard with Gantt charts and heat maps) and Tableau dashboards analysing employment trends, regional distribution and property market data.",
-    points: ["SQL & Python", "Power BI, Tableau, DAX", "Excel & R"],
+    points: ["SQL & Python", "Power Bi, Tableau, DAX", "Excel & R"],
   },
   {
     title: "Machine Learning & Predictive Analytics",
     body: "I apply ML to structured business problems - from data preparation through model development, tuning and evaluation.",
     practice:
       "Predictive and classification projects spanning marketing analysis, stock-price prediction, financial analysis and classification, including data cleaning, preprocessing and hyperparameter tuning.",
-    points: ["XGBoost & Random Forest", "Decision Trees & SVC", "Hyperparameter tuning"],
+    points: ["Xgboost & Random Forest", "Decision Trees & SVC", "Hyperparameter Tuning"],
   },
   {
     title: "Operations & Delivery",
     body: "I close the gap between recommendation and results - process improvement, workflow design, project and stakeholder management.",
     practice:
       "Implemented digital workflows that lifted office productivity by ~25%, and managed vendor/procurement activity that cut operating costs by ~15%.",
-    points: ["Process improvement", "Workflow design", "Stakeholder management"],
+    points: ["Process Improvement", "Workflow Design", "Stakeholder Management"],
   },
   {
     title: "Financial Services & Fintech",
@@ -893,7 +893,7 @@ export const services = [
     practice:
       "Built and licensed Kajco's credit and trust infrastructure - approved under the FCCPC Digital Lending Regulations and ready for deployment. See the case studies",
     practiceLink: "/projects/kajco-credit-trust-infrastructure",
-    points: ["Digital lending", "Credit assessment", "Behavioural scoring"],
+    points: ["Digital Lending", "Credit Assessment", "Behavioural Scoring"],
   },
 ];
 
