@@ -35,13 +35,15 @@ function Contact() {
   const [type, setType] = useState(projectTypes[0]!);
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const name = String(form.get("name") ?? "").trim();
-    const email = String(form.get("email") ?? "").trim();
-    const message = String(form.get("message") ?? "").trim();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
 
     const next: Record<string, string> = {};
     if (name.length < 2) next["name"] = "Please enter your name.";
@@ -50,15 +52,36 @@ function Contact() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    const body = `Project type: ${type}\n\n${message}\n\n- ${name} (${email})`;
-    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-      `${type} enquiry from ${name}`,
-    )}&body=${encodeURIComponent(body)}`;
+    data.set("_subject", `${type} enquiry from ${name}`);
+    data.set("enquiryType", type);
 
-    setSent(true);
-    toast.success("Opening your email client", {
-      description: "Your message is pre-filled and ready to send.",
-    });
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/mgaekeer", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setSent(true);
+        form.reset();
+        setType(projectTypes[0]!);
+        toast.success("Message sent", {
+          description: "Thanks - I'll get back to you shortly.",
+        });
+      } else {
+        toast.error("Something went wrong", {
+          description: `Please email me directly at ${profile.email}.`,
+        });
+      }
+    } catch {
+      toast.error("Something went wrong", {
+        description: `Please email me directly at ${profile.email}.`,
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -134,15 +157,16 @@ function Contact() {
 
             <button
               type="submit"
-              className="mt-7 inline-flex items-center gap-2 rounded-sm bg-signal px-6 py-3 font-mono text-xs uppercase tracking-widest text-primary-foreground transition-transform hover:-translate-y-0.5"
+              disabled={submitting}
+              className="mt-7 inline-flex items-center gap-2 rounded-sm bg-signal px-6 py-3 font-mono text-xs uppercase tracking-widest text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
             >
               <Send className="h-3.5 w-3.5" />
-              Send message
+              {submitting ? "Sending..." : "Send message"}
             </button>
 
             {sent && (
               <p className="mt-4 font-mono text-[11px] text-signal">
-                Message prepared - if your email client didn&apos;t open, write to {profile.email}.
+                Message sent - I&apos;ll get back to you shortly.
               </p>
             )}
           </form>
@@ -193,7 +217,7 @@ function Contact() {
             <div className="card-surface p-6">
               <p className="mono-label">What I take on</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                I take on strategy &amp; consulting, data &amp; BI, ML, operations, and fintech
+                I take on strategy & consulting, data & BI, ML, operations, and fintech
                 engagements - pick the closest match above.
               </p>
 
