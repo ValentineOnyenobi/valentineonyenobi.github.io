@@ -871,14 +871,14 @@ export const services = [
     body: "I turn raw, messy data into evidence and decisions - cleaning, structuring and analysing datasets in SQL and Python, then building the dashboards that make the findings usable.",
     practice:
       "Built interactive Power BI dashboards (including a supply-chain dashboard with Gantt charts and heat maps) and Tableau dashboards analysing employment trends, regional distribution and property market data.",
-    points: ["SQL & Python", "Power Bi, Tableau, DAX", "Excel & R"],
+    points: ["SQL & Python", "Power BI, Tableau, DAX", "Excel & R"],
   },
   {
     title: "Machine Learning & Predictive Analytics",
     body: "I apply ML to structured business problems - from data preparation through model development, tuning and evaluation.",
     practice:
       "Predictive and classification projects spanning marketing analysis, stock-price prediction, financial analysis and classification, including data cleaning, preprocessing and hyperparameter tuning.",
-    points: ["Xgboost & Random Forest", "Decision Trees & SVC", "Hyperparameter Tuning"],
+    points: ["XGBoost & Random Forest", "Decision Trees & SVC", "Hyperparameter Tuning"],
   },
   {
     title: "Operations & Delivery",
