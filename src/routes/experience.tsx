@@ -34,7 +34,7 @@ function Experience() {
       <Reveal>
         <p className="mono-label">Timeline</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-          Experience &amp; education
+          Experience &amp; Education
         </h1>
         <p className="mt-5 max-w-2xl text-muted-foreground">
           Consulting, project delivery and fintech across the UK, UAE and Nigeria - the operational
