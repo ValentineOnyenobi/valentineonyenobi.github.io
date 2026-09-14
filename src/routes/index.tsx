@@ -70,8 +70,10 @@ function Home() {
             <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
               Valentine
               <br />
-              <span className="text-signal-gradient">Onyenobi</span>
-              <span className="align-top text-lg font-normal normal-case tracking-normal text-muted-foreground sm:text-xl md:text-2xl">, CMgr</span>
+              <span className="text-signal-gradient">
+                Onyenobi
+                <span className="ml-1 align-middle text-[0.45em] font-normal normal-case tracking-normal">, CMgr</span>
+              </span>
             </h1>
             <p className="mt-5 font-display text-xl font-medium text-foreground/90 sm:text-2xl">
               Business &amp; Data Analyst
