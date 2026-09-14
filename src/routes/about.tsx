@@ -36,7 +36,10 @@ function About() {
           <span className="hidden h-px flex-1 max-w-24 bg-gradient-to-r from-signal/60 to-transparent sm:block" />
         </div>
         <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-          <span className="text-signal-gradient">Valentine Onyenobi, CMgr</span>
+          <span className="text-signal-gradient">
+            Valentine Onyenobi
+            <span className="ml-1 align-baseline text-[0.45em] font-normal normal-case tracking-normal">, CMgr</span>
+          </span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Business & Data Analyst · Founder & Consultant
