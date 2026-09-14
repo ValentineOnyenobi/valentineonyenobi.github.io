@@ -36,7 +36,7 @@ function About() {
           <span className="hidden h-px flex-1 max-w-24 bg-gradient-to-r from-signal/60 to-transparent sm:block" />
         </div>
         <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-          <span className="text-signal-gradient">Valentine Onyenobi</span>
+          <span className="text-signal-gradient">Valentine Onyenobi, CMgr</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Business & Data Analyst · Founder & Consultant
@@ -63,6 +63,11 @@ function About() {
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   I am most interested in the space between a business problem and the decision that
                   needs to be made.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  I&apos;m also a Chartered Manager (CMgr) with the Chartered Management Institute,
+                  reflecting independent recognition of my management capability and professional
+                  practice.
                 </p>
               </div>
             </div>

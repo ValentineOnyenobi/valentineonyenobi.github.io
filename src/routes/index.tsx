@@ -71,6 +71,7 @@ function Home() {
               Valentine
               <br />
               <span className="text-signal-gradient">Onyenobi</span>
+              <span className="align-top text-lg font-normal normal-case tracking-normal text-muted-foreground sm:text-xl md:text-2xl">, CMgr</span>
             </h1>
             <p className="mt-5 font-display text-xl font-medium text-foreground/90 sm:text-2xl">
               Business &amp; Data Analyst

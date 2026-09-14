@@ -35,7 +35,8 @@ export function SiteNav() {
             VO
           </span>
           <span className="font-display text-sm font-semibold tracking-tight">
-            Valentine Onyenobi
+            Valentine Onyenobi,
+            <sup className="ml-0.5 align-super text-[10px] text-muted-foreground">CMgr</sup>
           </span>
         </Link>
 
