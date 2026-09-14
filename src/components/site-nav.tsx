@@ -34,9 +34,9 @@ export function SiteNav() {
           <span className="grid h-8 w-8 place-items-center rounded-sm border border-signal/45 font-mono text-xs font-bold text-signal transition-colors group-hover:bg-signal group-hover:text-primary-foreground">
             VO
           </span>
-          <span className="font-display text-sm font-semibold tracking-tight">
+          <span className="whitespace-nowrap font-display text-sm font-semibold tracking-tight">
             Valentine Onyenobi,
-            <sup className="ml-0.5 align-super text-[10px] text-muted-foreground">CMgr</sup>
+            <span className="ml-0.5 text-[10px] text-muted-foreground">CMgr</span>
           </span>
         </Link>
 
