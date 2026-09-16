@@ -36,7 +36,7 @@ export function SiteNav() {
           </span>
           <span className="whitespace-nowrap font-display text-sm font-semibold tracking-tight">
             Valentine Onyenobi,
-            <span className="ml-0.5 align-baseline text-[10px] text-muted-foreground">CMgr</span>
+            <span className="ml-0.5 align-baseline text-[10px] text-muted-foreground">CMgr MCMI</span>
           </span>
         </Link>
 
