@@ -38,7 +38,7 @@ function About() {
         <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
           <span className="text-signal-gradient">
             Valentine Onyenobi
-            <span className="ml-1 align-baseline text-[0.6em] font-normal normal-case tracking-normal">, CMgr</span>
+            <span className="ml-1 align-baseline text-[0.6em] font-normal normal-case tracking-normal">, CMgr MCMI</span>
           </span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
@@ -68,9 +68,9 @@ function About() {
                   needs to be made.
                 </p>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  I&apos;m also a Chartered Manager (CMgr) with the Chartered Management Institute,
-                  reflecting independent recognition of my management capability and professional
-                  practice.
+                  I&apos;m also a Chartered Manager (CMgr MCMI), reflecting independent recognition of
+                  my management capability and professional practice, and also a member of the
+                  Chartered Management Institute.
                 </p>
               </div>
             </div>

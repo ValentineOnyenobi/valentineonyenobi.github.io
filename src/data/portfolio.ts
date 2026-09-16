@@ -852,7 +852,7 @@ export const education = [
 ];
 
 export const certifications = [
-  "Chartered Manager (CMgr) - Chartered Management Institute",
+  "Chartered Manager (CMgr MCMI) - Chartered Management Institute",
   "Certified SAFe® Scrum Master (CSM)",
   "CMI Certificate in Strategic Management and Leadership",
   "Data Analysis Certificate - Future Connect Training",

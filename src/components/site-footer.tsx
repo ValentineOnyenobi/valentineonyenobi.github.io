@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-surface/40">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="font-display text-sm font-semibold">Valentine Onyenobi, CMgr</p>
+          <p className="font-display text-sm font-semibold">Valentine Onyenobi, CMgr MCMI</p>
           <p className="mt-1 font-mono text-xs text-muted-foreground">
             {profile.role} · {profile.location}
           </p>
@@ -44,7 +44,7 @@ export function SiteFooter() {
 
       <div className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-4 font-mono text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Valentine Onyenobi, CMgr</span>
+          <span>© {new Date().getFullYear()} Valentine Onyenobi, CMgr MCMI</span>
           <div className="flex gap-4">
             <Link to="/projects" className="hover:text-signal">
               Projects

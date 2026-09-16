@@ -72,7 +72,7 @@ function Home() {
               <br />
               <span className="text-signal-gradient">
                 Onyenobi
-                <span className="ml-1 align-baseline text-[0.45em] font-normal normal-case tracking-normal">, CMgr</span>
+                <span className="ml-1 align-baseline text-[0.45em] font-normal normal-case tracking-normal">, CMgr MCMI</span>
               </span>
             </h1>
             <p className="mt-5 font-display text-xl font-medium text-foreground/90 sm:text-2xl">
