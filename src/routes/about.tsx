@@ -68,9 +68,9 @@ function About() {
                   needs to be made.
                 </p>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  I&apos;m also a Chartered Manager (CMgr MCMI) with the Chartered Management Institute,
-                  reflecting independent recognition of my management capability and professional
-                  practice, and also a member of the Chartered Management Institute.
+                  I&apos;m also a Chartered Manager (CMgr MCMI), reflecting independent recognition of
+                  my management capability and professional practice, and also a member of the
+                  Chartered Management Institute.
                 </p>
               </div>
             </div>
