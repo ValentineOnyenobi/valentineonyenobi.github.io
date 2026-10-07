@@ -76,32 +76,39 @@ function Home() {
               </span>
             </h1>
             <p className="mt-5 font-display text-xl font-medium text-foreground/90 sm:text-2xl">
-              Business &amp; Data Analyst
+              Business &amp; Data Analyst · Founder
             </p>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              {profile.tagline} My experience spans the UK, Nigeria and the UAE. This applies
-              whether I&apos;m joining a team, advising on a specific problem, or supporting a
-              project.
+              {profile.tagline}
             </p>
           </Reveal>
 
           <Reveal delay={240}>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link
-                to="/projects"
+                to="/contact"
                 className="group inline-flex items-center gap-2 rounded-sm bg-signal px-6 py-3 font-mono text-xs uppercase tracking-widest text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
-                View my work
+                Hire me
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link
-                to="/contact"
+              <a
+                href={profile.freetown}
+                target="_blank"
+                rel="noreferrer noopener"
                 className="group inline-flex items-center gap-2 rounded-sm border border-border px-6 py-3 font-mono text-xs uppercase tracking-widest transition-colors hover:border-signal/60 hover:text-signal"
               >
-                Work with me
+                Work with Freetown
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+              <Link
+                to="/projects"
+                className="group inline-flex items-center gap-2 rounded-sm border border-border px-6 py-3 font-mono text-xs uppercase tracking-widest transition-colors hover:border-signal/60 hover:text-signal"
+              >
+                View my work
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </Link>
               <a
