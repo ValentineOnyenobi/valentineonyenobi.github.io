@@ -1,11 +1,12 @@
 export const profile = {
   name: "Valentine Onyenobi",
   role: "Business & Data Analyst",
-  disciplines: "STRATEGY · DATA · BUSINESS INTELLIGENCE · OPERATIONS",
+  disciplines: "STRATEGY · DATA · OPERATIONS · BUSINESS BUILDING",
   tagline:
-    "I help organisations understand performance, solve complex business problems and make better decisions - combining strategic thinking with hands-on analytical capability.",
+    "I combine data analysis with hands-on experience building and running businesses, so insight turns into decisions that actually get carried out. My experience spans the UK, the UAE and Nigeria.",
   location: "London, UK",
-  email: "valentine@freetownconsultancy.com",
+  email: "vnonyenobi@gmail.com",
+  freetown: "https://freetownconsultancy.com",
   linkedin: "https://www.linkedin.com/in/valentineonyenobi/",
   github: "https://github.com/ValentineOnyenobi",
   summary: [
@@ -760,13 +761,22 @@ export const experience = [
     company: "IT Skills",
     place: "London, UK",
     period: "MAY 2025 - AUG 2026",
-    current: true,
     bullets: [
       "Led automation of data preparation workflows, cutting manual effort while improving accuracy of business insights and reporting.",
       "Developed and enhanced interactive Power BI dashboards, giving stakeholders real-time visualisations for timelier decisions.",
       "Performed in-depth business model analysis to support strategic planning, identifying trends, opportunities and growth areas.",
       "Integrated customer feedback with digital and in-store datasets for a fuller view of customer behaviour.",
       "Cleaned, structured and transformed large datasets in SQL, ensuring consistency and reliability for analysis.",
+    ],
+  },
+  {
+    role: "Founder (Strategic Oversight)",
+    company: "Freetown Consultancy & Services Ltd",
+    place: "Lagos, Nigeria",
+    period: "JUL 2026 - PRESENT",
+    current: true,
+    bullets: [
+      "Client delivery is now led by the Freetown team, with my strategic direction and senior oversight.",
     ],
   },
   {
@@ -782,7 +792,7 @@ export const experience = [
   },
   {
     role: "Business Strategy Manager",
-    company: "Freetown Consultancy & Services",
+    company: "Freetown Consultancy & Services Ltd",
     place: "Lagos, Nigeria",
     period: "JAN 2019 - AUG 2024",
     bullets: [
@@ -853,7 +863,7 @@ export const education = [
 
 export const certifications = [
   "Chartered Manager (CMgr MCMI) - Chartered Management Institute",
-  "Certified SAFe® Scrum Master (CSM)",
+  "Certified ScrumMaster® (CSM) - Scrum Alliance",
   "CMI Certificate in Strategic Management and Leadership",
   "Data Analysis Certificate - Future Connect Training",
 ];
