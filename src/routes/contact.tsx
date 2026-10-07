@@ -92,8 +92,11 @@ function Contact() {
           Tell me what decision you&apos;re trying to make
         </h1>
         <p className="mt-5 max-w-2xl text-muted-foreground">
-          Open to data analyst roles and consulting work. Send a few lines about the data or the
-          problem and I&apos;ll come back with how I&apos;d approach it.
+          Open to Business &amp; Data Analyst roles. For consulting, work with my firm,{" "}
+          <a href={profile.freetown} target="_blank" rel="noreferrer noopener" className="text-signal hover:underline">
+            Freetown Consultancy &amp; Services Ltd
+          </a>
+          . Send a few lines about the role or the problem and I&apos;ll come back to you.
         </p>
       </Reveal>
 
