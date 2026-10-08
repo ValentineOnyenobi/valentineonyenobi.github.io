@@ -5,7 +5,7 @@ export const profile = {
   tagline:
     "I combine data analysis with hands-on experience building and running businesses, so insight turns into decisions that actually get carried out. My experience spans the UK, the UAE and Nigeria.",
   location: "London, UK",
-  email: "vnonyenobi@mail.com",
+  email: "vnonyenobi@gmail.com",
   freetown: "https://freetownconsultancy.com",
   linkedin: "https://www.linkedin.com/in/valentineonyenobi/",
   github: "https://github.com/ValentineOnyenobi",
